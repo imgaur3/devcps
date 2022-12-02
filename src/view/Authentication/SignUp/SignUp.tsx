@@ -1,21 +1,15 @@
 import React, { useState } from 'react';
 import { Grid, Box, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
-import { Form, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import { signUpSchema } from './validation';
-import { WrapperButton } from '../../../components/index';
+import { WrapperButton, InputTextField } from '../../../components/index';
 import { signUp } from '../../../assets/index';
-import { InputTextField } from '../../../components/FormFields/InputTextField/InputTextField';
+import { signUpSchema } from './validation';
 import { style } from './style';
 
 const SignUp = () => {
-  // const [input, setInput] = useState({
-  //   name: '',
-  //   email: '',
-  //   password: '',
-  // });
   const [isLoading, setIsLoading] = useState(false);
   const { handleSubmit, control, getValues } = useForm({
     mode: 'onChange',
@@ -33,8 +27,6 @@ const SignUp = () => {
     const path = `/login`;
     navigate(path);
   };
-  // eslint-disable-next-line no-console
-  // console.log(input);
   return (
     <Box sx={style.signupContainer}>
       <Grid container spacing={2}>
@@ -46,17 +38,10 @@ const SignUp = () => {
             </Typography>
 
             <Grid>
-              <Form onSubmit={handleSubmit(onSubmit)} data-testid="Slideshow">
+              <form onSubmit={handleSubmit(onSubmit)} data-testid="Slideshow">
                 <Grid style={{ marginBottom: 20 }}>
                   <InputTextField
                     name={'name'}
-                    // value={name}
-                    // onChange={(e: any) =>
-                    //   setInput({
-                    //     ...input,
-                    //     [e.target.name]: e.target.value,
-                    //   })
-                    // }
                     control={control}
                     placeholder={'Username'}
                   />
@@ -64,13 +49,6 @@ const SignUp = () => {
                 <Grid style={{ marginBottom: 20 }}>
                   <InputTextField
                     name={'email'}
-                    // value={input.email}
-                    // onChange={(e: any) =>
-                    //   setInput({
-                    //     ...input,
-                    //     [e.target.email]: e.target.value,
-                    //   })
-                    // }
                     control={control}
                     placeholder={'Email'}
                   />
@@ -79,13 +57,6 @@ const SignUp = () => {
                   <InputTextField
                     type="password"
                     name={'password'}
-                    // value={input.password}
-                    // onChange={(e: any) =>
-                    //   setInput({
-                    //     ...input,
-                    //     [e.target.password]: e.target.value,
-                    //   })
-                    // }
                     control={control}
                     placeholder={'Password'}
                   />
@@ -131,7 +102,7 @@ const SignUp = () => {
                     />
                   </Box>
                 </Grid>
-              </Form>
+              </form>
             </Grid>
           </Box>
         </Grid>

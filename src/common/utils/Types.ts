@@ -1,6 +1,16 @@
 export interface IRoute {
   path: string;
-  element: any;
+  component: any;
   layout: any;
   exact?: boolean;
+}
+
+export interface UserRole {
+  role: string;
+}
+export interface User {
+  username: string;
+  name: string;
+  phone: string | null;
+  role: UserRole;
 }

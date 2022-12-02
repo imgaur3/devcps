@@ -6,7 +6,7 @@ import {
   emailValidConstant,
 } from '../../../common/utils/constants';
 
-export const signUpSchema = yup.object().shape({
+export const logInSchema = yup.object().shape({
   name: yup.string().required(requiredConstant),
   password: yup.string().required(requiredConstant),
   email: yup

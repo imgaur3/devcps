@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline, StyledEngineProvider } from '@mui/material';
 
-// import Router from './Routes';
+import Router from './Router';
 import { theme } from './Theme';
 
 const App: FC = () => {
@@ -11,7 +11,7 @@ const App: FC = () => {
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          {/* <Router /> */}
+          <Router />
         </ThemeProvider>
       </StyledEngineProvider>
     </div>

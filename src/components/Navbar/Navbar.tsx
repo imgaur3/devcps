@@ -14,8 +14,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { Grid } from '@mui/material';
 
+import { Logo } from '../../assets/index';
 interface Props {
   window?: () => Window;
 }
@@ -65,70 +65,6 @@ const Navbar = (props: Props) => {
     <>
       <Box sx={{ display: 'flex', fontFamily: 'open sans' }}>
         <AppBar component="nav">
-          <Grid
-            container
-            spacing={1}
-            style={{
-              background: '#efefef',
-            }}
-          >
-            <Grid
-              item
-              lg={3}
-              md={3}
-              xs={12}
-              sm={12}
-              style={{
-                textAlign: 'center',
-                color: '#737373',
-              }}
-            >
-              <i className="fa fa-phone" aria-hidden="true"></i>&nbsp;
-              <span>0562-2424554</span>
-            </Grid>
-            <Grid
-              item
-              lg={3}
-              md={3}
-              xs={12}
-              sm={12}
-              style={{
-                textAlign: 'center',
-                color: '#737373',
-              }}
-            >
-              <i className="fa fa-envelope"></i>&nbsp;
-              <span>info@cprinternational.com</span>
-            </Grid>
-            <Grid
-              item
-              lg={3}
-              md={3}
-              xs={12}
-              sm={12}
-              style={{
-                textAlign: 'center',
-                color: '#737373',
-              }}
-            >
-              <i className="fa fa-sign-in"></i>&nbsp;
-              <span>Log In</span>
-            </Grid>
-            <Grid
-              item
-              lg={3}
-              md={3}
-              xs={12}
-              sm={12}
-              style={{
-                textAlign: 'center',
-                color: '#737373',
-              }}
-            >
-              <i className="fa fa-sign-in"></i>&nbsp;
-              <span>Sign Up</span>
-            </Grid>
-          </Grid>
           <Toolbar>
             <IconButton
               color="inherit"
@@ -144,7 +80,7 @@ const Navbar = (props: Props) => {
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             >
-              CPR International
+              <img src={Logo} alt="Logo" />
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               {navItems.map((item) => (

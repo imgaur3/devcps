@@ -7,4 +7,14 @@ export const emailRegex =
 
 const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
-export { requiredConstant, emailValidConstant, urlValidConstant, phoneRegex };
+const ROLE = {
+  ADMIN: 'ADMIN',
+};
+
+export {
+  requiredConstant,
+  emailValidConstant,
+  urlValidConstant,
+  phoneRegex,
+  ROLE,
+};

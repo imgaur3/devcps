@@ -1,12 +1,11 @@
 import React from 'react';
 import { Grid, Box, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
-import { Form, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-import WrapperButton from '../../../components/Wrapper/WrapperButton/WrapperButton';
+import { WrapperButton, InputTextField } from '../../../components/index';
 import { logIn } from '../../../assets/index';
 import { style } from './style';
-import { InputTextField } from '../../../components/FormFields/InputTextField/InputTextField';
 
 const LogIn = () => {
   const navigate = useNavigate();
@@ -16,20 +15,12 @@ const LogIn = () => {
   const onSubmit = () => {
     const data: any = { ...getValues() };
     // eslint-disable-next-line no-console
-    console.log(data, 'filledData');
+    console.log(data);
     const loggedUser = localStorage.getItem('user');
     const parsedData = loggedUser !== null ? JSON.parse(loggedUser) : '{}';
     // eslint-disable-next-line no-console
-    console.log(parsedData, 'parsedData');
-    const keys = Object.keys(parsedData);
-    // eslint-disable-next-line no-console
-    console.log(keys, 'object Keys');
-    if (parsedData === data) {
-      navigate('/slideshow');
-    } else {
-      // eslint-disable-next-line no-console
-      console.log('Wrong Credentials');
-    }
+    console.log(parsedData);
+    navigate('/');
   };
   return (
     <Box sx={style.signupContainer}>
@@ -45,7 +36,7 @@ const LogIn = () => {
             </Typography>
 
             <Grid>
-              <Form onSubmit={handleSubmit(onSubmit)} data-testid="Slideshow">
+              <form onSubmit={handleSubmit(onSubmit)} data-testid="Slideshow">
                 <Grid style={{ marginBottom: 20 }}>
                   <InputTextField
                     name={'email'}
@@ -100,15 +91,19 @@ const LogIn = () => {
                     />
                   </Box>
                 </Grid>
-              </Form>
+              </form>
             </Grid>
           </Box>
         </Grid>
         <Grid item lg={6}>
           <Box sx={style.rightContainer}>
-            <Typography sx={style.alrightTitle}>Facing any issues ?</Typography>
+            <Typography sx={style.alrightTitle}>Don't have account?</Typography>
             &nbsp;
-            <WrapperButton title={'Forget Password'} sx={style.logInButton} />
+            <WrapperButton
+              title={'Sign Up'}
+              sx={style.logInButton}
+              onClick={() => navigate('/signup')}
+            />
           </Box>
           <Box sx={style.signupImage}>
             <img src={logIn} alt={'signup'} />

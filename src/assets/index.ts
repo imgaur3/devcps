@@ -1,4 +1,4 @@
 import logIn from './images/login.png';
 import signUp from './images/signup.png';
-
-export { logIn, signUp };
+import Logo from './images/logo.png';
+export { logIn, signUp, Logo };
