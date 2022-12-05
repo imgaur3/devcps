@@ -16,6 +16,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 import { Logo } from '../../assets/index';
+import { WrapperButton } from '..';
 interface Props {
   window?: () => Window;
 }
@@ -26,6 +27,51 @@ const navItems = [
     name: 'Home',
     path: '/',
     key: 'home',
+  },
+  {
+    name: 'Themes',
+    path: '/thmes',
+    key: 'themes',
+  },
+  {
+    name: 'Quran',
+    path: '/quran',
+    key: 'quran',
+  },
+  {
+    name: 'Publictaions',
+    path: '/publictaions',
+    key: 'publictaions',
+  },
+  {
+    name: 'Media',
+    path: '/media',
+    key: 'media',
+  },
+  {
+    name: 'About Us',
+    path: '/about-us',
+    key: 'aboutus',
+  },
+  {
+    name: 'Order Free Quran',
+    path: '/order-free-quran',
+    key: 'order-free-quran',
+  },
+  {
+    name: 'Publictaions',
+    path: '/publictaions',
+    key: 'publictaions',
+  },
+  {
+    name: 'Faqs',
+    path: '/faqs',
+    key: 'faqs',
+  },
+  {
+    name: 'Get Involved',
+    path: '/get-involved',
+    key: 'get-involved',
   },
 ];
 
@@ -55,6 +101,8 @@ const Navbar = (props: Props) => {
           </ListItem>
         ))}
       </List>
+      <Divider />
+      <WrapperButton title={'DONATE'} />
     </Box>
   );
 
@@ -78,7 +126,10 @@ const Navbar = (props: Props) => {
             <Typography
               variant="h6"
               component="div"
-              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+              sx={{
+                flexGrow: 1,
+                display: { xs: 'none', sm: 'block', fontFamily: 'open sans' },
+              }}
             >
               <img src={Logo} alt="Logo" />
             </Typography>

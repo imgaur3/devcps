@@ -3,6 +3,7 @@ import { Button, ButtonProps, CircularProgress } from '@mui/material';
 
 interface Props extends ButtonProps {
   icon?: ReactNode;
+  name?: string;
   type?: 'button' | 'reset' | 'submit';
   isLoading?: boolean;
   className?: any;

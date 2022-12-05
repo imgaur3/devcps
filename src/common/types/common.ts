@@ -16,3 +16,8 @@ export interface ISignUpModal {
   email: string;
   password: string;
 }
+
+export interface ISignInModal {
+  username: string;
+  password: string;
+}

@@ -3,13 +3,17 @@ import { Grid, Box, Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useDispatch } from 'react-redux';
+import { get } from 'lodash';
 
+import { SignUpImage } from '../../../assets/index';
+import { signUp } from '../../../redux/Actions';
 import { WrapperButton, InputTextField } from '../../../components/index';
-import { signUp } from '../../../assets/index';
 import { signUpSchema } from './validation';
 import { style } from './style';
 
 const SignUp = () => {
+  const dispatchAction = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
   const { handleSubmit, control, getValues } = useForm({
     mode: 'onChange',
@@ -19,7 +23,16 @@ const SignUp = () => {
     setIsLoading(false);
     const data = { ...getValues() };
     localStorage.setItem('user', JSON.stringify(data));
-    navigate('/login');
+    // navigate('/login');
+    dispatchAction(
+      signUp({
+        name: get(data, 'name'),
+        email: get(data, 'email'),
+        password: get(data, 'password'),
+      }),
+    );
+    // eslint-disable-next-line no-console
+    console.log(signUp);
   };
 
   const navigate = useNavigate();
@@ -32,7 +45,7 @@ const SignUp = () => {
       <Grid container spacing={2}>
         <Grid item lg={6}>
           <Box sx={style.authContainer}>
-            <Typography sx={style.logoTitle}>CPR International</Typography>
+            <Typography sx={style.logoTitle}>CPS International</Typography>
             <Typography sx={style.welcomeText}>
               Welcome to CPR International
             </Typography>
@@ -119,7 +132,7 @@ const SignUp = () => {
             />
           </Box>
           <Box sx={style.signupImage}>
-            <img src={signUp} alt={'signup'} />
+            <img src={SignUpImage} alt={'signup'} />
           </Box>
         </Grid>
       </Grid>

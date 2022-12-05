@@ -28,7 +28,7 @@ import { Box } from '@mui/material';
 
 import Sidebar from '../components/SideBar/SideBar';
 type Props = {
-  children: ReactNode;
+  children?: ReactNode;
 };
 const AdminLayout = ({ children }: Props) => {
   return (
