@@ -15,8 +15,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-import { Logo } from '../../assets/index';
-import { WrapperButton } from '..';
 interface Props {
   window?: () => Window;
 }
@@ -29,49 +27,59 @@ const navItems = [
     key: 'home',
   },
   {
+    name: 'Slideshow',
+    path: '/slideshow',
+    key: 'slideshow',
+  },
+  {
+    name: 'Volunteer',
+    path: '/volunteer',
+    key: 'volunteer',
+  },
+  {
+    name: 'Creation',
+    path: '/creation',
+    key: 'creation',
+  },
+  {
+    name: 'Related',
+    path: '/related',
+    key: 'related',
+  },
+  {
+    name: 'Articles',
+    path: '/articles',
+    key: 'articles',
+  },
+  {
+    name: 'audios',
+    path: '/audios',
+    key: 'audios',
+  },
+  {
     name: 'Themes',
-    path: '/thmes',
+    path: '/themes',
     key: 'themes',
   },
   {
-    name: 'Quran',
-    path: '/quran',
-    key: 'quran',
+    name: 'quran download',
+    path: '/qurandownload',
+    key: 'qurandownload',
   },
   {
-    name: 'Publictaions',
-    path: '/publictaions',
-    key: 'publictaions',
+    name: 'Magazine',
+    path: '/magazine',
+    key: 'magazine',
   },
   {
-    name: 'Media',
-    path: '/media',
-    key: 'media',
+    name: 'Testimonials',
+    path: '/testimonials',
+    key: 'testimonials',
   },
   {
-    name: 'About Us',
-    path: '/about-us',
-    key: 'aboutus',
-  },
-  {
-    name: 'Order Free Quran',
-    path: '/order-free-quran',
-    key: 'order-free-quran',
-  },
-  {
-    name: 'Publictaions',
-    path: '/publictaions',
-    key: 'publictaions',
-  },
-  {
-    name: 'Faqs',
-    path: '/faqs',
-    key: 'faqs',
-  },
-  {
-    name: 'Get Involved',
-    path: '/get-involved',
-    key: 'get-involved',
+    name: 'signup',
+    path: '/signup',
+    key: 'signup',
   },
 ];
 
@@ -101,8 +109,6 @@ const Navbar = (props: Props) => {
           </ListItem>
         ))}
       </List>
-      <Divider />
-      <WrapperButton title={'DONATE'} />
     </Box>
   );
 
@@ -126,12 +132,9 @@ const Navbar = (props: Props) => {
             <Typography
               variant="h6"
               component="div"
-              sx={{
-                flexGrow: 1,
-                display: { xs: 'none', sm: 'block', fontFamily: 'open sans' },
-              }}
+              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             >
-              <img src={Logo} alt="Logo" />
+              CPR International
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               {navItems.map((item) => (

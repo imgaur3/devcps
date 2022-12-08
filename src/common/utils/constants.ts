@@ -9,6 +9,7 @@ const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
 const ROLE = {
   ADMIN: 'ADMIN',
+  USER: 'USER',
 };
 
 export {

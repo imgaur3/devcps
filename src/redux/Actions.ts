@@ -1,4 +1,4 @@
-import { ISignInModal, ISignUpModal } from '../common/types';
+import { ISignInModal, ISignUpModal } from '../common/types/common';
 
 export const USER_LOGIN = 'user/USER-LOGIN';
 export const SIGN_UP = 'user/SIGN_UP';

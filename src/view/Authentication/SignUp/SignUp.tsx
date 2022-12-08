@@ -23,7 +23,7 @@ const SignUp = () => {
     setIsLoading(false);
     const data = { ...getValues() };
     localStorage.setItem('user', JSON.stringify(data));
-    // navigate('/login');
+    navigate('/login');
     dispatchAction(
       signUp({
         name: get(data, 'name'),
