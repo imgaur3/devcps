@@ -1,10 +1,10 @@
 import AuthLayout from '../../Layouts/AuthLayout';
 import { IRoute } from '../../common/types/common';
-import Home from './Home';
+import NotFound from './NotFound';
 
 export const HomeRoute: IRoute = {
-  path: '/home',
-  component: Home,
+  path: '/not-found',
+  component: NotFound,
   layout: AuthLayout,
   exact: true,
 };

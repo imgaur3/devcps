@@ -14,6 +14,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import SearchIcon from '@mui/icons-material/Search';
+
+import { Logo } from '../../assets';
+import { style } from './style';
+import WrapperButton from '../Wrapper/WrapperButton/WrapperButton';
 
 interface Props {
   window?: () => Window;
@@ -23,38 +28,8 @@ const drawerWidth = 240;
 const navItems = [
   {
     name: 'Home',
-    path: '/',
+    path: '/home',
     key: 'home',
-  },
-  {
-    name: 'Slideshow',
-    path: '/slideshow',
-    key: 'slideshow',
-  },
-  {
-    name: 'Volunteer',
-    path: '/volunteer',
-    key: 'volunteer',
-  },
-  {
-    name: 'Creation',
-    path: '/creation',
-    key: 'creation',
-  },
-  {
-    name: 'Related',
-    path: '/related',
-    key: 'related',
-  },
-  {
-    name: 'Articles',
-    path: '/articles',
-    key: 'articles',
-  },
-  {
-    name: 'audios',
-    path: '/audios',
-    key: 'audios',
   },
   {
     name: 'Themes',
@@ -62,24 +37,49 @@ const navItems = [
     key: 'themes',
   },
   {
+    name: 'Quran',
+    path: '/quran',
+    key: 'quran',
+  },
+  {
+    name: 'Publications',
+    path: '/publications',
+    key: 'publications',
+  },
+  {
+    name: 'Media',
+    path: '/media',
+    key: 'media',
+  },
+  {
+    name: 'About Us',
+    path: '/about-us',
+    key: 'about-us',
+  },
+  {
+    name: 'audios',
+    path: '/audios',
+    key: 'audios',
+  },
+  {
+    name: 'Order free quran ',
+    path: '/order-free-quran ',
+    key: 'order-free-quran ',
+  },
+  {
     name: 'quran download',
     path: '/qurandownload',
     key: 'qurandownload',
   },
   {
-    name: 'Magazine',
-    path: '/magazine',
-    key: 'magazine',
+    name: 'Faqs',
+    path: '/faqs',
+    key: 'faqs',
   },
   {
-    name: 'Testimonials',
-    path: '/testimonials',
-    key: 'testimonials',
-  },
-  {
-    name: 'signup',
-    path: '/signup',
-    key: 'signup',
+    name: 'Get Involved',
+    path: '/get-Involved',
+    key: 'get-Involved',
   },
 ];
 
@@ -92,7 +92,7 @@ const Navbar = (props: Props) => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box onClick={handleDrawerToggle} sx={style.navItemDrawer}>
       <Typography variant="h6" sx={{ my: 2 }}>
         CPR Internatinal
       </Typography>
@@ -117,7 +117,7 @@ const Navbar = (props: Props) => {
   const Navigate = useNavigate();
   return (
     <>
-      <Box sx={{ display: 'flex', fontFamily: 'open sans' }}>
+      <Box sx={style.appBarContainer}>
         <AppBar component="nav">
           <Toolbar>
             <IconButton
@@ -134,18 +134,22 @@ const Navbar = (props: Props) => {
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             >
-              CPR International
+              <img src={Logo} alt="Logo" />
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               {navItems.map((item) => (
                 <Button
                   key={item.name}
-                  sx={{ color: '#fff' }}
+                  sx={style.menuItems}
                   onClick={() => Navigate(item.path)}
                 >
                   {item.name}
                 </Button>
               ))}
+              <WrapperButton title={'DONATE'} sx={style.menuDonateButton} />
+              <IconButton size="large" aria-label="search" color="inherit">
+                <SearchIcon sx={style.searchIconStyle} />
+              </IconButton>
             </Box>
           </Toolbar>
         </AppBar>

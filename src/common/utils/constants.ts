@@ -12,10 +12,13 @@ const ROLE = {
   USER: 'USER',
 };
 
+const fontFamily = 'Oswald';
+
 export {
   requiredConstant,
   emailValidConstant,
   urlValidConstant,
   phoneRegex,
   ROLE,
+  fontFamily,
 };
