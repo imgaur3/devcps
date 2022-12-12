@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
@@ -120,12 +119,15 @@ const Navbar = (props: Props) => {
       <Box sx={style.appBarContainer}>
         <AppBar component="nav">
           <Toolbar>
+            <Box sx={style.mobileLogoContainer}>
+              <img src={Logo} alt="Mobile-logo" />
+            </Box>
             <IconButton
               color="inherit"
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: 'none' } }}
+              sx={style.hamburgerIcon}
             >
               <MenuIcon />
             </IconButton>
@@ -160,7 +162,7 @@ const Navbar = (props: Props) => {
             open={mobileOpen}
             onClose={handleDrawerToggle}
             ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
+              keepMounted: true,
             }}
             sx={{
               display: { xs: 'block', sm: 'none' },

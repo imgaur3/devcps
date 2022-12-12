@@ -12,6 +12,13 @@ export const style = {
       fontFamily: fontFamily,
       padding: 2,
     },
+    '.MuiToolbar-root': {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginRight: 0,
+      marginTop: 0,
+      paddingRight: 0,
+    },
   },
   menuItems: {
     color: theme.palette.text.primary,
@@ -28,5 +35,21 @@ export const style = {
   },
   searchIconStyle: {
     color: theme.palette.grey[500],
+  },
+  hamburgerIcon: {
+    mr: 2,
+    display: { sm: 'none' },
+    padding: 1,
+    '.MuiSvgIcon-root': {
+      width: 40,
+      height: 30,
+      backgroundColor: theme.palette.grey[500],
+    },
+  },
+  mobileLogoContainer: {
+    textAlign: 'left',
+    '@media (min-width: 600px)': {
+      display: 'none',
+    },
   },
 };
