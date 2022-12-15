@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 import { IRoute } from '../common/types/common';
 
@@ -10,7 +10,7 @@ const AuthenticatedRouteWrapper = ({
   component: Component,
   ...props
 }: RouteWrapper) => {
-  console.log('AUTHENTICATE ROUTE MAPPER'); //eslint-disable-line
+  const isLogged = true;
   const RouteWrapper = () => {
     return (
       <Layout>
@@ -18,7 +18,7 @@ const AuthenticatedRouteWrapper = ({
       </Layout>
     );
   };
-  return <RouteWrapper />;
+  return isLogged ? <RouteWrapper /> : <Navigate to="/" />;
 };
 
 export default AuthenticatedRouteWrapper;

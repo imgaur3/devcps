@@ -4,9 +4,11 @@ export const style = {
   navItemDrawer: {
     textAlign: 'center',
     textTransform: 'uppercase',
+    width: '100%',
   },
   appBarContainer: {
     display: 'flex',
+    marginBottom: 5,
     '.MuiAppBar-root': {
       backgroundColor: theme.palette.primary.light,
       fontFamily: fontFamily,
@@ -50,6 +52,20 @@ export const style = {
     textAlign: 'left',
     '@media (min-width: 600px)': {
       display: 'none',
+    },
+  },
+  dropdownMenuItems: {
+    '.MuiList-root MuiMenu-list': {
+      backgroundColor: theme.palette.background.paper,
+      marginTop: 2,
+    },
+    '.MuiMenuItem-root': {
+      color: theme.palette.grey[900],
+      fontFamily: 'open sans',
+      fontSize: 13,
+      ':hover': {
+        color: theme.palette.common.black,
+      },
     },
   },
 };

@@ -31,8 +31,12 @@ const SignUp = () => {
         password: get(data, 'password'),
       }),
     );
+    const user = localStorage.getItem('user');
     // eslint-disable-next-line no-console
-    console.log(signUp);
+    console.log(user);
+    if (user === '"test@gmail.com"') {
+      navigate('/home');
+    } else navigate('/signup');
   };
 
   const navigate = useNavigate();

@@ -1,4 +1,4 @@
-import { USER_LOGIN, SIGN_UP } from './Actions';
+import { USER_LOGIN, SIGN_UP, LOG_OUT } from './Actions';
 import { AuthAction } from './Types';
 
 export const authInitialState: any = {
@@ -23,6 +23,7 @@ export const authInitialState: any = {
 
 const AuthReducer = (state = authInitialState, action: AuthAction) => {
   const { type, payload } = action;
+
   switch (type) {
     case USER_LOGIN:
       return {
@@ -35,16 +36,26 @@ const AuthReducer = (state = authInitialState, action: AuthAction) => {
         user: { ...payload },
       };
     case SIGN_UP:
+      // only for demo
+      // eslint-disable-next-line no-case-declarations
+      const user = localStorage.getItem('user');
+      if (user === 'test@gmail.com') {
+        return {
+          ...state,
+          loggedIn: true,
+        };
+      } else {
+        return {
+          ...state,
+          loggedIn: false,
+        };
+      }
+    case LOG_OUT:
+      localStorage.clear();
       return {
-        ...state,
-        signUp: {
-          errorMessage: '',
-          isLoading: true,
-          email: '',
-          password: '',
-          username: '',
-        },
+        ...authInitialState,
       };
+
     default:
       return state;
   }
