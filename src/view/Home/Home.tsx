@@ -1,32 +1,53 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { Box, Typography } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { Box, Grid, Typography } from '@mui/material';
 
-import { logOut } from '../../redux/Actions';
+import { SliderHeader, WrapperButton } from 'components';
+
+import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar/Navbar';
+import { style } from './style';
 
 const Home = () => {
-  const dispatchAction = useDispatch();
-  const navigate = useNavigate();
-
   return (
-    <Box>
-      <Typography>
-        Mini variant drawer Lorem ipsum dolor sit amet, consectetur adipiscing
-        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Risus
-        at morbi tincidunt. Lorem donec massa sapien faucibus et molestie ac.
-      </Typography>
+    <Box sx={style.homeContainer}>
       <Navbar />
-      <button
-        onClick={() => {
-          dispatchAction(logOut);
-          navigate('/signup');
-        }}
-      >
-        Logout
-      </button>
+      <Box sx={style.sliderContainer}>
+        <SliderHeader />
+      </Box>
+      <Box sx={style.secondSectionContainer}>
+        <Grid container spacing={3}>
+          <Grid item lg={6} sm={12} md={12} xs={12}>
+            <Box sx={{ padding: 3 }}>
+              <Typography sx={style.sectionHeading}>
+                MAULANA WAHIDUDDIN KHAN
+              </Typography>
+              <Typography sx={style.sectionDescription}>
+                ISLAMIC SCHOLAR I SPIRITUAL GUIDE I AMBASSADOR OF PEACE
+              </Typography>
+              <Typography sx={style.sectionMoreDescription}>
+                was an Islamic Scholar, Spiritual Guide and Ambassador of Peace.
+                He prepared a treasuretrove of wisdom in the form of books,
+                articles and video and audio lectures demonstrating the
+                relevance of Islam in the modern idiom.
+              </Typography>
+              <WrapperButton title={'LEARN MORE'} sx={style.learnButton} />
+            </Box>
+          </Grid>
+          <Grid item lg={6} sm={12} md={12} xs={12}>
+            <Box sx={{ padding: 3 }}>
+              <Box sx={style.videoContainer}>
+                <iframe
+                  src="https://www.youtube.com/embed/n0AIGEI7b9U"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                />
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <Footer />
     </Box>
   );
 };

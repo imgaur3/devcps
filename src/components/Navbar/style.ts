@@ -8,7 +8,6 @@ export const style = {
   },
   appBarContainer: {
     display: 'flex',
-    marginBottom: 5,
     '.MuiAppBar-root': {
       backgroundColor: theme.palette.primary.light,
       fontFamily: fontFamily,
@@ -34,14 +33,19 @@ export const style = {
     backgroundColor: theme.palette.text.secondary,
     padding: '5px 15px 5px 15px',
     borderRadius: 2,
+    fontFamily: fontFamily,
+    '@media screen and (max-width: 600px)': {
+      display: 'none',
+    },
   },
   searchIconStyle: {
+    mr: 2,
+    display: { sm: 'none' },
     color: theme.palette.grey[500],
   },
   hamburgerIcon: {
-    mr: 2,
     display: { sm: 'none' },
-    padding: 1,
+    marginLeft: 2,
     '.MuiSvgIcon-root': {
       width: 40,
       height: 30,

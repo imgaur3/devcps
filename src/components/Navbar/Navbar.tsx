@@ -1,24 +1,27 @@
-/* eslint-disable no-undef */
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+/* eslint-disable no-unused-vars */
+import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
+import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import SearchIcon from '@mui/icons-material/Search';
-import { Menu, MenuItem } from '@mui/material';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { Menu, MenuItem } from '@mui/material';
 
-import { Logo } from '../../assets';
+import { WrapperButton } from 'components';
+import { Logo } from 'assets';
+
 import { style } from './style';
-import WrapperButton from '../Wrapper/WrapperButton/WrapperButton';
+import SearchContainer from './SearchContainer';
+
 interface Props {
+  // eslint-disable-next-line no-undef
   window?: () => Window;
 }
 
@@ -185,22 +188,27 @@ const aboutItems = [
     key: 'news-room',
   },
 ];
-const Navbar = (props: Props) => {
-  const Navigate = useNavigate();
+
+export default function Navbar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<any>(null);
   const [menu, setMenu] = React.useState<any>();
+  const [search, setSearch] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  //Mobile Dropdown Menu
+  const handleClick = (event: any) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={style.navItemDrawer}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        CPR Internatinal
-      </Typography>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -221,7 +229,7 @@ const Navbar = (props: Props) => {
                 setMenu(aboutItems);
                 handleClick(event);
               } else {
-                Navigate(item.path);
+                // Navigate('/item.path');
               }
             }}
           >
@@ -238,41 +246,34 @@ const Navbar = (props: Props) => {
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
-  const handleClick = (event: any) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
   return (
-    <>
-      <Box sx={style.appBarContainer}>
-        <AppBar component="nav">
-          <Toolbar>
-            <Box sx={style.mobileLogoContainer}>
-              <img src={Logo} alt="Mobile-logo" />
-            </Box>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={style.hamburgerIcon}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-            >
-              <img src={Logo} alt="Logo" />
-            </Typography>
+    <Box sx={style.appBarContainer}>
+      <AppBar component="nav">
+        <Toolbar>
+          <Box sx={style.mobileLogoContainer}>
+            <img src={Logo} alt="Mobile-logo" />
+          </Box>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={style.hamburgerIcon}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+          >
+            <img src={Logo} alt="Logo-main" />
+          </Typography>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button
-                key={item.name}
+                key={item.key}
                 sx={style.menuItems}
                 onClick={(event) => {
                   if (item.key === 'themes') {
@@ -288,7 +289,7 @@ const Navbar = (props: Props) => {
                     setMenu(aboutItems);
                     handleClick(event);
                   } else {
-                    Navigate(item.path);
+                    // Navigate(item.path);
                   }
                 }}
               >
@@ -299,32 +300,38 @@ const Navbar = (props: Props) => {
                 {item.key === 'about-us' && <KeyboardArrowDownIcon />}
               </Button>
             ))}
-            <WrapperButton title={'DONATE'} sx={style.menuDonateButton} />
-            <IconButton size="large" aria-label="search" color="inherit">
-              <SearchIcon sx={style.searchIconStyle} />
-            </IconButton>
-          </Toolbar>
-        </AppBar>
-        <Box component="nav">
-          <Drawer
-            container={container}
-            variant="temporary"
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            ModalProps={{
-              keepMounted: true,
-            }}
-            sx={{
-              display: { xs: 'block', sm: 'none' },
-              '& .MuiDrawer-paper': {
-                boxSizing: 'border-box',
-                width: drawerWidth,
-              },
-            }}
+          </Box>
+          <WrapperButton title={'DONATE'} sx={style.menuDonateButton} />
+          <IconButton
+            size="large"
+            aria-label="search"
+            color="inherit"
+            onClick={() => setSearch(!search)}
           >
-            {drawer}
-          </Drawer>
-        </Box>
+            <SearchIcon sx={style.searchIconStyle} />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      <Box component="nav">
+        <Drawer
+          container={container}
+          anchor={'right'}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              width: drawerWidth,
+            },
+          }}
+        >
+          {drawer}
+        </Drawer>
         <Menu
           sx={{ top: 40 }}
           id="simple-menu"
@@ -347,7 +354,6 @@ const Navbar = (props: Props) => {
                 <MenuItem
                   key={item.name}
                   onClick={() => {
-                    Navigate('/item.path');
                     handleClose();
                   }}
                 >
@@ -356,12 +362,11 @@ const Navbar = (props: Props) => {
               ))}
           </Box>
         </Menu>
-        <Box component="main" sx={{ p: 0 }}>
-          <Toolbar />
-        </Box>
       </Box>
-    </>
+      <Box component="main" sx={{ p: 3 }}>
+        <Toolbar />
+      </Box>
+      <Box>{search ? <SearchContainer /> : null}</Box>
+    </Box>
   );
-};
-
-export default Navbar;
+}

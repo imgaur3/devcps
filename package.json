@@ -29,11 +29,11 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.38.0",
     "react-horizontal-scrolling-menu": "^3.2.2",
+    "react-material-ui-carousel": "^3.4.2",
     "react-redux": "^7.2.9",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-select": "^5.4.0",
-    "react-slick": "^0.29.0",
     "redux": "^4.2.0",
     "redux-persist": "^6.0.0",
     "slick-carousel": "^1.8.1",
@@ -64,5 +64,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-slick": "^0.23.10"
   }
 }

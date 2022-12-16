@@ -64,7 +64,7 @@ export const theme = createTheme({
       A700: '#EFF3F6',
     },
     background: {
-      default: '#FFFFFF',
+      default: '#2E5D9E',
       paper: '#FFFFFF',
     },
   },

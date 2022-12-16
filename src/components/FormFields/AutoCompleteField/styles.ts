@@ -1,10 +1,10 @@
 export const style = {
   textValInput: {
     width: '100%',
-    '& .MuiInput-underline:after': {
-      borderBottom: '#FF8010',
+    '.MuiInput-underline:after': {
+      borderBottom: '#5F7C8C',
     },
-    '& .MuiInputLabel-root .Mui-focused': {
+    '.MuiInputLabel-root .Mui-focused': {
       color: 'green',
     },
   },
@@ -14,7 +14,7 @@ export const style = {
     color: '#404852',
     '&:hover': {
       '&:not(.Mui-disabled)::before': {
-        borderBottomColor: '#FF8010',
+        borderBottomColor: '#5F7C8C',
       },
     },
   },
@@ -23,7 +23,7 @@ export const style = {
     fontWeight: 400,
     fontSize: 15,
     letterSpacing: 0.35,
-    '& .MuiFormLabel-root.Mui-focused': {
+    '.MuiFormLabel-root.Mui-focused': {
       color: 'red',
       paddingBottom: 10,
     },
@@ -33,11 +33,11 @@ export const style = {
     fontWeight: 400,
     fontSize: 15,
     transform: 'translate(0, 1.5px) scale(1)',
-    '& .MuiFormLabel-root.Mui-focused': {
+    '.MuiFormLabel-root.Mui-focused': {
       color: '#404852',
       paddingBottom: 10,
     },
-    '& .MuiInputLabel-root .Mui-focused': {
+    '.MuiInputLabel-root .Mui-focused': {
       marginTop: 10,
     },
   },
