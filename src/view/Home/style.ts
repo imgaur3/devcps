@@ -42,6 +42,7 @@ export const style = {
     lineHeight: 2,
     fontSize: 17,
     paddingBottom: 1,
+    textAlign: 'justify',
   },
   learnButton: {
     background: 'transparent',
@@ -50,5 +51,29 @@ export const style = {
     marginTop: 2,
     borderRadius: 2,
     fontWeight: 'bold',
+  },
+  centerImage: {
+    margin: 'auto',
+    textAlign: 'center',
+  },
+  thirdSectionContainer: {
+    width: '100%',
+    background: theme.palette.primary.main,
+    padding: '50px 100px 50px 100px',
+    '@media screen and (max-width: 600px)': {
+      padding: '10px 20px 10px 20px',
+    },
+  },
+  peaceButton: {
+    background: theme.palette.background.paper,
+    color: theme.palette.text.primary,
+    fontWeight: 'bold',
+    margin: 1,
+  },
+  initiativeButton: {
+    background: theme.palette.background.paper,
+    color: theme.palette.text.primary,
+    fontWeight: 'bold',
+    margin: 1,
   },
 };

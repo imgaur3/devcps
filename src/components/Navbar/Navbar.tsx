@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -215,7 +214,7 @@ export default function Navbar(props: Props) {
           <Button
             key={item.name}
             sx={style.menuItems}
-            onClick={(event) => {
+            onClick={(event: any) => {
               if (item.key === 'themes') {
                 setMenu(themeItems);
                 handleClick(event);
@@ -275,7 +274,7 @@ export default function Navbar(props: Props) {
               <Button
                 key={item.key}
                 sx={style.menuItems}
-                onClick={(event) => {
+                onClick={(event: any) => {
                   if (item.key === 'themes') {
                     setMenu(themeItems);
                     handleClick(event);

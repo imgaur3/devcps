@@ -1,42 +1,31 @@
-import React from 'react';
-import Carousel from 'react-material-ui-carousel';
-import { Box, Paper } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 
-import { banner1, banner2 } from 'assets';
+import DesktopSliderHeader from './DesktopSliderHeader';
+import MobileHeaderSlider from './MobileHeaderSlider';
 
-import { style } from './style';
-const img1 = banner1;
-const img2 = banner2;
+function SliderHeader() {
+  const [state, setState] = useState({
+    mobileView: false,
+  });
 
-const SliderHeader = () => {
-  const items = [
-    {
-      name: img1,
-      key: 'image1',
-    },
-    {
-      name: img2,
-      key: 'image2',
-    },
-  ];
+  const { mobileView } = state;
 
-  return (
-    <Carousel>
-      {items.map((item, i) => (
-        <Item key={i} item={item} />
-      ))}
-    </Carousel>
-  );
-};
+  useEffect(() => {
+    const setResponsiveness = () => {
+      return window.innerWidth < 1025
+        ? setState((prevState) => ({ ...prevState, mobileView: true }))
+        : setState((prevState) => ({ ...prevState, mobileView: false }));
+    };
 
-function Item(props: any) {
-  return (
-    <Paper>
-      <Box sx={style.sliderImagesContainer}>
-        <img src={props.item.name} />
-      </Box>
-    </Paper>
-  );
+    setResponsiveness();
+    window.addEventListener('resize', () => setResponsiveness());
+    return () => {
+      window.removeEventListener('resize', () => setResponsiveness());
+    };
+  }, []);
+
+  if (mobileView) return <MobileHeaderSlider />;
+  return <DesktopSliderHeader />;
 }
 
 export default SliderHeader;

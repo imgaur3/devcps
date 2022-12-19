@@ -12,6 +12,7 @@ export const style = {
       backgroundColor: theme.palette.primary.light,
       fontFamily: fontFamily,
       padding: 2,
+      boxShadow: 'none',
     },
     '.MuiToolbar-root': {
       flexDirection: 'row',
