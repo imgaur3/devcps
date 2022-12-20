@@ -3,7 +3,6 @@ export const style = {
   carouselContainer: {
     width: '100%',
     padding: 10,
-    background: theme.palette.background.paper,
   },
   cardBox: {
     padding: 2,

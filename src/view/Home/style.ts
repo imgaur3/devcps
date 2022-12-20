@@ -104,4 +104,39 @@ export const style = {
     padding: '5px 25px 5px 25px',
     fontWeight: 'bold',
   },
+  fourthSectionContainer: {
+    width: '100%',
+    textAlign: 'center',
+    background: theme.palette.primary.main,
+    padding: '70px 120px 70px 120px',
+    '@media screen and (max-width: 600px)': {
+      padding: '20px 40px 20px 40px',
+    },
+  },
+  thoughtsTitle: {
+    color: theme.palette.text.primary,
+    fontSize: 35,
+  },
+  thoughtLoadMoreButton: {
+    background: theme.palette.text.primary,
+    padding: '5px 25px 5px 25px',
+    fontWeight: 'bold',
+  },
+  fifthSectionContainer: {
+    width: '100%',
+    background: theme.palette.background.paper,
+    padding: '50px 100px 50px 100px',
+    '@media screen and (max-width: 600px)': {
+      padding: '10px 20px 10px 20px',
+    },
+  },
+  downloadQuranButton: {
+    background: theme.palette.text.secondary,
+    padding: '5px 25px 5px 25px',
+  },
+  readOnlineButton: {
+    background: theme.palette.text.secondary,
+    padding: '5px 25px 5px 25px',
+    marginLeft: 2,
+  },
 };

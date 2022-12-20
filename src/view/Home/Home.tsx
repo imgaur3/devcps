@@ -150,6 +150,77 @@ const Home = () => {
         <CarouselSlider deviceType={undefined} />
         <WrapperButton sx={style.loadMoreButton} title={'VIEW ALL'} />
       </Box>
+      <Box sx={style.fourthSectionContainer}>
+        <Grid container spacing={2}>
+          <Grid item lg={12} sm={12} md={12} xs={12}>
+            <Typography sx={style.thoughtsTitle}>
+              <span style={{ fontWeight: 600 }}>THOUGHTS:</span> MAULANA
+              WAHIDUDDIN KHAN
+            </Typography>
+            <Typography sx={style.caroDesc}>
+              PRESENTING ISLAM AS IT IS IN THE MODERN IDIOM
+            </Typography>
+          </Grid>
+          <Grid item lg={12} sm={12} md={12} xs={12}>
+            <Box>
+              <CarouselSlider deviceType={undefined} />
+              <WrapperButton
+                sx={style.thoughtLoadMoreButton}
+                title={'VIEW ALL'}
+              />
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box sx={style.fifthSectionContainer}>
+        <Grid container spacing={3}>
+          <Grid item lg={6} sm={12} md={12} xs={12}>
+            <Box sx={{ padding: 3 }}>
+              <Typography sx={style.sectionHeading}>QURAN</Typography>
+              <Typography sx={style.sectionMoreDescription}>
+                Maulana Wahiduddin Khan along with Prof. Farida Khanam made a
+                simple, easily-understandable English translation of the Quran.
+                It is the most distributed translation in the world and is
+                available in more than 30 languages. Small in size and
+                lightweight, you can easily carry with you wherever you go.
+              </Typography>
+              <WrapperButton
+                title={'DOWNLOAD QURAN'}
+                sx={style.downloadQuranButton}
+              />
+              <WrapperButton
+                title={'READ ONLINE'}
+                sx={style.readOnlineButton}
+              />
+            </Box>
+          </Grid>
+          <Grid item lg={6} sm={12} md={12} xs={12}>
+            <Box sx={{ padding: 3 }}>
+              <Box sx={style.imageResponsive}>
+                <img src={sec3} alt="Sec2-image" />
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box sx={style.fourthSectionContainer}>
+        <Grid container>
+          <Grid item lg={12} sm={12} md={12} xs={12}>
+            <Typography sx={style.thoughtsTitle}>
+              <span style={{ fontWeight: 600 }}>TOPICS</span>
+            </Typography>
+          </Grid>
+          <Grid item lg={12} sm={12} md={12} xs={12}>
+            <Box>
+              <CarouselSlider deviceType={undefined} />
+              <WrapperButton
+                sx={style.thoughtLoadMoreButton}
+                title={'VIEW ALL'}
+              />
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
       <Footer />
     </Box>
   );
