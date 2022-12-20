@@ -76,4 +76,32 @@ export const style = {
     fontWeight: 'bold',
     margin: 1,
   },
+  imageResponsive: {
+    '& img': {
+      width: '100%',
+    },
+  },
+  carouselContainer: {
+    width: '100%',
+    padding: 5,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  caroTitle: {
+    fontFamily: fontFamily,
+    textAlign: 'center',
+    fontSize: 50,
+    color: theme.palette.text.secondary,
+  },
+  caroDesc: {
+    color: theme.palette.grey[500],
+    letterSpacing: 3,
+  },
+  loadMoreButton: {
+    background: theme.palette.text.secondary,
+    padding: '5px 25px 5px 25px',
+    fontWeight: 'bold',
+  },
 };

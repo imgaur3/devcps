@@ -14,6 +14,7 @@ import sec2 from './images/sec2.jpg';
 import sec3 from './images/sec3.jpg';
 import initiative from './images/initiative.jpg';
 import card1 from './images/card1.jpg';
+import card2 from './images/card2.jpg';
 export {
   logIn,
   SignUpImage,
@@ -31,4 +32,5 @@ export {
   sec3,
   initiative,
   card1,
+  card2,
 };

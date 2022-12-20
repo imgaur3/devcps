@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 
-import { SliderHeader, WrapperButton } from 'components';
+import { SliderHeader, WrapperButton, CarouselSlider } from 'components';
 import { initiative, sec2, sec3 } from 'assets';
 
 import Footer from '../../components/Footer';
@@ -51,7 +51,7 @@ const Home = () => {
       <Box sx={style.thirdSectionContainer}>
         <Grid container spacing={2}>
           <Grid item lg={6} sm={12} md={12} xs={12} sx={style.centerImage}>
-            <Box>
+            <Box sx={style.imageResponsive}>
               <img src={sec2} alt="Sec2-image" />
             </Box>
           </Grid>
@@ -92,7 +92,7 @@ const Home = () => {
           </Grid>
           <Grid item lg={6} sm={12} md={12} xs={12}>
             <Box sx={{ padding: 3 }}>
-              <Box>
+              <Box sx={style.imageResponsive}>
                 <img src={sec3} alt="Sec2-image" />
               </Box>
             </Box>
@@ -102,13 +102,13 @@ const Home = () => {
       <Box sx={style.thirdSectionContainer}>
         <Grid container spacing={2}>
           <Grid item lg={6} sm={12} md={12} xs={12} sx={style.centerImage}>
-            <Box>
+            <Box sx={style.imageResponsive}>
               <img src={initiative} alt="Sec2-image" />
             </Box>
           </Grid>
           <Grid item lg={6} sm={12} md={12} xs={12}>
             <Box sx={{ padding: 3 }}>
-              <Box sx={{ padding: 3 }}>
+              <Box sx={{ padding: 3, textAlign: 'center' }}>
                 <Typography sx={style.sectionHeading}>CPS MISSION</Typography>
                 <Typography sx={style.sectionMoreDescription}>
                   CPS helps people discover their Creator to usher in an
@@ -139,7 +139,17 @@ const Home = () => {
           </Grid>
         </Grid>
       </Box>
-      <Box>{/* <CardSlider /> */}</Box>
+      <Box sx={style.carouselContainer}>
+        <Box>
+          <Typography sx={style.caroTitle}>WISDOM</Typography>
+          <Typography sx={style.caroDesc}>
+            QURAN AND SUNNAH PROVIDE WISDOM TO GUIDE MAN FROM THIS LIFE TO THE
+            HEREAFTER
+          </Typography>
+        </Box>
+        <CarouselSlider deviceType={undefined} />
+        <WrapperButton sx={style.loadMoreButton} title={'VIEW ALL'} />
+      </Box>
       <Footer />
     </Box>
   );
