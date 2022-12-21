@@ -6,7 +6,6 @@ interface Props extends ButtonProps {
   name?: string;
   type?: 'button' | 'reset' | 'submit';
   isLoading?: boolean;
-  className?: any;
   variant?: any;
   title?: string;
 }

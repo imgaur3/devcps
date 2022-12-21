@@ -1,8 +1,16 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 
-import { SliderHeader, WrapperButton, CarouselSlider } from 'components';
-import { initiative, sec2, sec3 } from 'assets';
+import {
+  ArticleCarosuel,
+  SliderHeader,
+  WrapperButton,
+  CarouselSlider,
+  VideoCarosuel,
+  BooksCarosuel,
+  QuranCarousel,
+} from 'components';
+import { initiative, sec2, sec3, leafback } from 'assets';
 
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar/Navbar';
@@ -203,7 +211,7 @@ const Home = () => {
           </Grid>
         </Grid>
       </Box>
-      <Box sx={style.fourthSectionContainer}>
+      <Box sx={style.sixSectionContainer}>
         <Grid container>
           <Grid item lg={12} sm={12} md={12} xs={12}>
             <Typography sx={style.thoughtsTitle}>
@@ -212,11 +220,103 @@ const Home = () => {
           </Grid>
           <Grid item lg={12} sm={12} md={12} xs={12}>
             <Box>
-              <CarouselSlider deviceType={undefined} />
+              <CarouselSlider />
               <WrapperButton
                 sx={style.thoughtLoadMoreButton}
                 title={'VIEW ALL'}
               />
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box sx={style.sevenContainer}>
+        <Grid container>
+          <Grid item lg={12} xs={12} md={12} sm={12}>
+            <Typography sx={style.caroTitle}>FEATURED ARTICLES</Typography>
+          </Grid>
+          <Grid item lg={12} xs={12} md={12} sm={12}>
+            <ArticleCarosuel />
+            <Box sx={{ textAlign: 'center' }}>
+              <WrapperButton sx={style.loadMoreButton} title={'VIEW ALL'} />
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box sx={style.eightContainer}>
+        <Grid container>
+          <Grid item lg={12} sm={12} md={12} xs={12}>
+            <Typography sx={style.caroVideoTitle}>FEATURED VIDEOS</Typography>
+          </Grid>
+          <Grid item lg={12} sm={12} md={12} xs={12}>
+            <Box>
+              <VideoCarosuel />
+              <WrapperButton
+                sx={style.thoughtLoadMoreButton}
+                title={'VIEW ALL'}
+              />
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box sx={style.nineContainer}>
+        <Grid container>
+          <Grid item lg={12} xs={12} md={12} sm={12}>
+            <Typography sx={style.caroTitle}>FEATURED BOOKS</Typography>
+          </Grid>
+          <Grid item lg={12} xs={12} md={12} sm={12}>
+            <Box sx={{ textAlign: 'center' }}>
+              <BooksCarosuel />
+              <WrapperButton sx={style.loadMoreButton} title={'VIEW ALL'} />
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box sx={style.tenContainer}>
+        <Grid container>
+          <Grid item lg={12} sm={12} md={12} xs={12}>
+            <Typography sx={style.caroVideoTitle}>MAGAZINES</Typography>
+          </Grid>
+          <Grid item lg={12} sm={12} md={12} xs={12}>
+            <Box>
+              <BooksCarosuel />
+              <WrapperButton
+                sx={style.thoughtLoadMoreButton}
+                title={'VIEW ALL'}
+              />
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box sx={style.getQuranContainer}>
+        <Box sx={style.leafBackStyle}>
+          <img src={leafback} alt="check" />
+        </Box>
+        <Box sx={style.absoluteContainer}>
+          <Typography sx={style.leafBackText}>
+            GET YOUR OWN <br />
+            QURAN RIGHT NOW!
+          </Typography>
+          <Box sx={style.leafButtonContainer}>
+            <WrapperButton
+              title={'Download Quran'}
+              sx={style.leafBackButtonStyle}
+            />
+            <WrapperButton
+              title={'Read Online'}
+              sx={style.leafBackButtonStyle}
+            />
+          </Box>
+        </Box>
+      </Box>
+      <Box>
+        <Grid container>
+          <Grid item lg={12} xs={12} md={12} sm={12}>
+            <Typography sx={style.caroTitle}>QURAN DOWNLOAD</Typography>
+          </Grid>
+          <Grid item lg={12} xs={12} md={12} sm={12}>
+            <Box sx={{ textAlign: 'center' }}>
+              <QuranCarousel />
+              <WrapperButton sx={style.loadMoreButton} title={'VIEW ALL'} />
             </Box>
           </Grid>
         </Grid>

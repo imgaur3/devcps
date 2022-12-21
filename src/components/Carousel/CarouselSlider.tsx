@@ -9,7 +9,7 @@ import { WrapperButton } from 'components';
 import { style } from './style';
 
 type props = {
-  deviceType: any;
+  deviceType?: any;
 };
 const responsive = {
   desktop: {

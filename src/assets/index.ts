@@ -15,6 +15,14 @@ import sec3 from './images/sec3.jpg';
 import initiative from './images/initiative.jpg';
 import card1 from './images/card1.jpg';
 import card2 from './images/card2.jpg';
+import article1 from './images/article1.jpg';
+import videoCaro1 from './images/videoCaro1.jpg';
+import book1 from './images/book1.jpg';
+import book2 from './images/book2.jpg';
+import book3 from './images/book3.jpg';
+import book4 from './images/book4.jpg';
+import leafback from './images/leafback.jpg';
+import quran from './images/quran.jpg';
 export {
   logIn,
   SignUpImage,
@@ -33,4 +41,12 @@ export {
   initiative,
   card1,
   card2,
+  article1,
+  videoCaro1,
+  book1,
+  book2,
+  book3,
+  book4,
+  leafback,
+  quran,
 };
