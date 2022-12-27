@@ -33,6 +33,11 @@ import gallery2 from './images/gallery2.jpg';
 import gallery3 from './images/gallery3.jpg';
 import gallery4 from './images/gallery4.jpg';
 import gallery5 from './images/gallery5.jpg';
+import quote1 from './images/quote1.jpg';
+import quote2 from './images/quote2.jpg';
+import quote3 from './images/quote3.jpg';
+import quote4 from './images/quote4.jpg';
+import quote5 from './images/quote5.jpg';
 
 export {
   logIn,
@@ -70,4 +75,9 @@ export {
   gallery3,
   gallery4,
   gallery5,
+  quote1,
+  quote2,
+  quote3,
+  quote4,
+  quote5,
 };

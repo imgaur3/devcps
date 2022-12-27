@@ -84,10 +84,7 @@ export const style = {
   carouselContainer: {
     width: '100%',
     padding: 5,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    textAlign: 'center',
   },
   caroTitle: {
     fontFamily: fontFamily,
@@ -104,6 +101,7 @@ export const style = {
     background: theme.palette.text.secondary,
     padding: '5px 25px 5px 25px',
     fontWeight: 'bold',
+    marginTop: 3,
   },
   fourthSectionContainer: {
     width: '100%',
@@ -298,5 +296,14 @@ export const style = {
     background: theme.palette.text.secondary,
     padding: '5px 25px 5px 25px',
     fontWeight: 'bold',
+  },
+  quotesContainer: {
+    width: '100%',
+    textAlign: 'center',
+    background: theme.palette.primary.main,
+    padding: '70px 120px 70px 120px',
+    '@media screen and (max-width: 600px)': {
+      padding: '20px 40px 20px 40px',
+    },
   },
 };

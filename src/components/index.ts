@@ -10,6 +10,8 @@ import QuranCarousel from './QuranCarousel/QuranCarousel';
 import Subscribe from './Subscribe/Subscribe';
 import Accordian from './Wrapper/WrappedAccordian/Accordian';
 import GalleryCarousel from './GalleryCarousel/GalleryCarousel';
+import QuotesCarosuel from './QuotesCarosuel/QuotesCarosuel';
+import WisdomCarosuel from './WisdomCarosuel/WisdomCarosuel';
 export {
   Header,
   WrapperButton,
@@ -23,4 +25,6 @@ export {
   Subscribe,
   Accordian,
   GalleryCarousel,
+  QuotesCarosuel,
+  WisdomCarosuel,
 };

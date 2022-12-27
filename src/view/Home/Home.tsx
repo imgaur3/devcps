@@ -11,6 +11,8 @@ import {
   CarouselSlider,
   Subscribe,
   GalleryCarousel,
+  QuotesCarosuel,
+  WisdomCarosuel,
 } from 'components';
 import { initiative, sec2, sec3, leafback, peace, involved } from 'assets';
 
@@ -157,6 +159,9 @@ const Home = () => {
             HEREAFTER
           </Typography>
         </Box>
+        <Box>
+          <WisdomCarosuel />
+        </Box>
         <WrapperButton sx={style.loadMoreButton} title={'VIEW ALL'} />
       </Box>
       <Box sx={style.fourthSectionContainer}>
@@ -169,6 +174,9 @@ const Home = () => {
             <Typography sx={style.caroDesc}>
               PRESENTING ISLAM AS IT IS IN THE MODERN IDIOM
             </Typography>
+          </Grid>
+          <Grid item lg={12} sm={12} md={12} xs={12}>
+            <WisdomCarosuel />
           </Grid>
           <Grid item lg={12} sm={12} md={12} xs={12}>
             <Box>
@@ -219,6 +227,7 @@ const Home = () => {
             </Typography>
           </Grid>
           <Grid item lg={12} sm={12} md={12} xs={12}>
+            <WisdomCarosuel />
             <Box>
               <WrapperButton
                 sx={style.thoughtLoadMoreButton}
@@ -234,7 +243,6 @@ const Home = () => {
             <Typography sx={style.caroTitle}>FEATURED ARTICLES</Typography>
           </Grid>
           <Grid item lg={12} xs={12} md={12} sm={12}>
-            <ArticleCarosuel />
             <Box sx={{ textAlign: 'center' }}>
               <WrapperButton sx={style.loadMoreButton} title={'VIEW ALL'} />
             </Box>
@@ -368,6 +376,22 @@ const Home = () => {
             </Box>
           </Grid>
         </Grid>
+      </Box>
+      <Box sx={style.quotesContainer}>
+        <Box>
+          <Typography sx={style.caroVideoTitle}>QUOTES BY MAULANA</Typography>
+        </Box>
+        <Box sx={style.learnCardContainer}>
+          <Box sx={style.learnCardSubContainer}>
+            <QuotesCarosuel />
+            <Box sx={{ marginTop: 5 }}>
+              <WrapperButton
+                sx={style.thoughtLoadMoreButton}
+                title={'VIEW ALL'}
+              />
+            </Box>
+          </Box>
+        </Box>
       </Box>
       <Box sx={style.initiativeContainer}>
         <Grid container spacing={3}>
