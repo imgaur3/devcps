@@ -3,14 +3,34 @@ import { Box, Typography } from '@mui/material';
 import Carousel from 'react-multi-carousel';
 
 import 'react-multi-carousel/lib/styles.css';
-import { card1, card2 } from 'assets';
-import { WrapperButton } from 'components';
+import { learnCard, learnCard2, learnCard3 } from 'assets';
 
 import { style } from './style';
 
 type props = {
   deviceType?: any;
 };
+const cardData = [
+  {
+    id: '1',
+    image: learnCard,
+    title: 'COUNTERING VIOLENT EXTREMISM',
+    description: 'Case of Ideology Vs Counter-Ideology',
+  },
+  {
+    id: '2',
+    image: learnCard2,
+    title: 'CULTURE OF PEACE',
+    description: 'Developing God Oriented Personalities',
+  },
+  {
+    id: '3',
+    image: learnCard3,
+    title: 'INTERFAITH DIALOGUE FOR PEACE-MAKING',
+    description: 'Peaceful Dialogue for Mutual Learning',
+  },
+];
+
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -34,12 +54,12 @@ const CarouselSlider = ({ deviceType }: props) => {
       <Carousel
         swipeable={true}
         draggable={true}
-        showDots={true}
+        showDots={false}
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
         autoPlay={deviceType !== 'mobile' ? true : false}
-        // autoPlaySpeed={1000}
+        autoPlaySpeed={5000}
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
@@ -47,52 +67,22 @@ const CarouselSlider = ({ deviceType }: props) => {
         removeArrowOnDeviceType={['tablet', 'mobile', 'desktop']}
         deviceType={deviceType}
         dotListClass="custom-dot-list-style"
-        // itemClass="carousel-item-padding-40-px"
+        itemClass="carousel-item-padding-40-px"
       >
-        <Box sx={style.cardBox}>
-          <Box sx={style.cardImage}>
-            <img src={card1} alt="check" />
+        {cardData.map((item: any) => (
+          <Box sx={style.learnCardBox} key={`${item.id}`}>
+            <Box></Box>
+            <Box sx={style.cardImageStyle}>
+              <img src={item.image} alt="card-image" />
+            </Box>
+            <Box sx={{ padding: '10px 30px 10px 30px', textAlign: 'center' }}>
+              <Typography sx={style.cardBoxTitle}>{item.title}</Typography>
+              <Typography sx={style.cardBoxDescription}>
+                {item.description}
+              </Typography>
+            </Box>
           </Box>
-          <Box sx={style.cardContent}>
-            <WrapperButton title={'DISCOVER GOD'} sx={style.cardButton} />
-            <Typography sx={style.cardText}>
-              The Quran tells us that man was created so that
-            </Typography>
-          </Box>
-        </Box>
-        <Box sx={style.cardBox}>
-          <Box sx={style.cardImage}>
-            <img src={card2} alt="check" />
-          </Box>
-          <Box sx={style.cardContent}>
-            <WrapperButton title={'DISCOVER GOD'} sx={style.cardButton} />
-            <Typography sx={style.cardText}>
-              The Quran tells us that man was created so that
-            </Typography>
-          </Box>
-        </Box>
-        <Box sx={style.cardBox}>
-          <Box sx={style.cardImage}>
-            <img src={card1} alt="check" />
-          </Box>
-          <Box sx={style.cardContent}>
-            <WrapperButton title={'DISCOVER GOD'} sx={style.cardButton} />
-            <Typography sx={style.cardText}>
-              The Quran tells us that man was created so that
-            </Typography>
-          </Box>
-        </Box>
-        <Box sx={style.cardBox}>
-          <Box sx={style.cardImage}>
-            <img src={card1} alt="check" />
-          </Box>
-          <Box sx={style.cardContent}>
-            <WrapperButton title={'DISCOVER GOD'} sx={style.cardButton} />
-            <Typography sx={style.cardText}>
-              The Quran tells us that man was created so that
-            </Typography>
-          </Box>
-        </Box>
+        ))}
       </Carousel>
     </Box>
   );

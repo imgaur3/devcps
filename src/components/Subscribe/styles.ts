@@ -1,32 +1,18 @@
+import { theme } from 'Theme';
 export const style = {
   subscribeContainer: {
     width: '100%',
-    height: '500px',
-    opacity: 0.9,
-    position: 'relative',
   },
   subscribeSubContainer: {
     top: 0,
-    boxShadow: 'inset 0 0 0 2000px rgba(195, 159, 106, 0.9)',
+    background: theme.palette.text.secondary,
     color: '#fff',
-    position: 'absolute',
     width: '100%',
-    height: '500px',
     fontSize: '20px',
     paddingTop: '100px',
+    paddingBottom: 10,
     '@media screen and (max-width: 600px)': {
       paddingTop: '50px',
-    },
-  },
-  subscribeBackImage: {
-    '& img': {
-      width: '100%',
-      height: '500px',
-      position: 'relative',
-      objectFit: 'cover',
-      '@media (max-width: 600px)': {
-        height: '500px',
-      },
     },
   },
   leafText: {
@@ -40,7 +26,6 @@ export const style = {
     fontFamily: 'oswald',
   },
   subscribeParaText: {
-    letterSpacing: 2,
     fontSize: 18,
     paddingBottom: 3,
     fontFamily: 'Open Sans',

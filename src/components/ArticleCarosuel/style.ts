@@ -2,10 +2,8 @@ import { theme } from 'Theme';
 export const style = {
   carouselContainer: {
     width: '100%',
-    padding: 10,
   },
   cardBox: {
-    padding: 2,
     position: 'relative',
   },
   cardImage: {
@@ -36,5 +34,32 @@ export const style = {
     fontStyle: 'italic',
     fontSize: 20,
     fontFamily: 'open sans',
+  },
+  learnCardBox: {
+    background: theme.palette.background.paper,
+    height: '380px',
+    margin: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  cardImageStyle: {
+    '& img': {
+      width: '100px',
+      height: '100px',
+      borderRadius: '100%',
+    },
+  },
+  cardBoxTitle: {
+    fontSize: 18,
+    fontFamily: 'open sans',
+    letterSpacing: 0.1,
+    color: theme.palette.grey[100],
+  },
+  cardBoxDescription: {
+    marginTop: 3,
+    fontWeight: 'bolder',
+    color: theme.palette.grey[500],
   },
 };

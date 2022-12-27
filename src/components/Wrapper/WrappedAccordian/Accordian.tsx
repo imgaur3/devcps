@@ -13,16 +13,30 @@ const Accordian = ({ title, description }: props) => {
   return (
     <div>
       <Accordion
-        sx={{ background: '#F0E8DB', color: '#545454', marginBottom: 2 }}
+        sx={{
+          background: '#F0E8DB',
+          color: '#545454',
+          marginBottom: 2,
+        }}
       >
         <AccordionSummary
           expandIcon={<AddIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>{title}</Typography>
+          <Typography sx={{ fontSize: 20, color: '#545454' }}>
+            {title}
+          </Typography>
         </AccordionSummary>
-        <AccordionDetails sx={{ background: '#fff', color: '#2E5D9E' }}>
+        <AccordionDetails
+          sx={{
+            background: '#fff',
+            color: '#2E5D9E',
+            fontSize: 25,
+            wordWrap: 'break-word',
+            textAlign: 'justify',
+          }}
+        >
           <Typography>{description}</Typography>
         </AccordionDetails>
       </Accordion>

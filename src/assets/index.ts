@@ -23,6 +23,17 @@ import book3 from './images/book3.jpg';
 import book4 from './images/book4.jpg';
 import leafback from './images/leafback.jpg';
 import quran from './images/quran.jpg';
+import learnCard from './images/learnCard.jpg';
+import learnCard2 from './images/learnCard2.jpg';
+import learnCard3 from './images/learnCard3.jpg';
+import peace from './images/peace.jpg';
+import involved from './images/involved.png';
+import gallery1 from './images/gallery1.jpg';
+import gallery2 from './images/gallery2.jpg';
+import gallery3 from './images/gallery3.jpg';
+import gallery4 from './images/gallery4.jpg';
+import gallery5 from './images/gallery5.jpg';
+
 export {
   logIn,
   SignUpImage,
@@ -49,4 +60,14 @@ export {
   book4,
   leafback,
   quran,
+  learnCard,
+  learnCard2,
+  learnCard3,
+  peace,
+  involved,
+  gallery1,
+  gallery2,
+  gallery3,
+  gallery4,
+  gallery5,
 };

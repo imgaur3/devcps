@@ -96,8 +96,9 @@ export const style = {
     color: theme.palette.text.secondary,
   },
   caroDesc: {
-    color: theme.palette.grey[500],
+    color: theme.palette.grey[100],
     letterSpacing: 3,
+    fontSize: 15,
   },
   loadMoreButton: {
     background: theme.palette.text.secondary,
@@ -216,5 +217,86 @@ export const style = {
     fontSize: 60,
     letterSpacing: 0.5,
     fontWeight: 'bolder',
+  },
+  cpsLearningContainer: {
+    width: '100%',
+    textAlign: 'center',
+    background: theme.palette.primary.main,
+    padding: '70px 120px 70px 120px',
+    '@media screen and (max-width: 600px)': {
+      padding: '20px 40px 20px 40px',
+    },
+  },
+  learnCardContainer: {
+    width: '100%',
+    background: theme.palette.primary.main,
+    padding: 2,
+  },
+  learnCardSubContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    flexWrap: 'wrap',
+    marginBottom: 2,
+  },
+  initiativeContainer: {
+    width: '100%',
+    background: theme.palette.background.paper,
+    padding: '50px 100px 50px 100px',
+    '@media screen and (max-width: 600px)': {
+      padding: '10px 20px 10px 20px',
+    },
+  },
+  learnCardBox: {
+    background: theme.palette.background.paper,
+  },
+  cardImageStyle: {
+    '& img': {
+      width: '100%',
+      height: 'auto',
+    },
+  },
+  cardBoxTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  cardBoxDescription: {
+    fontStyle: 'italic',
+    color: theme.palette.grey[100],
+  },
+  subscribeFooterContainer: {
+    width: '100%',
+  },
+  accrodianContainer: {
+    paddingTop: 3,
+    paddingBottom: 10,
+    width: '100%',
+    background: theme.palette.background.paper,
+  },
+  accordianLoadMoreButton: {
+    background: theme.palette.text.primary,
+    padding: '5px 25px 5px 25px',
+    marginBottom: 5,
+    fontWeight: 'bold',
+  },
+  galleryContainer: {
+    width: '100%',
+    background: theme.palette.background.paper,
+    textAlign: 'center',
+    padding: '70px 120px 70px 120px',
+    '@media screen and (max-width: 600px)': {
+      padding: '20px 40px 20px 40px',
+    },
+  },
+  galleryHeading: {
+    fontFamily: fontFamily,
+    color: theme.palette.text.secondary,
+    fontSize: 45,
+    paddingBottom: 3,
+  },
+  galleryLoadMoreButton: {
+    background: theme.palette.text.secondary,
+    padding: '5px 25px 5px 25px',
+    fontWeight: 'bold',
   },
 };

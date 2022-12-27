@@ -4,7 +4,6 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import OutlinedInput from '@mui/material/OutlinedInput';
 
-import maulana from '../../assets/images/maulana.jpg';
 import { style } from './styles';
 interface State {
   amount: string;
@@ -21,19 +20,19 @@ const Subscribe = () => {
     };
   return (
     <Box sx={style.subscribeContainer}>
-      <Box sx={style.subscribeBackImage}>
-        <img src={maulana} alt="bg-image" />
-      </Box>
       <Box sx={style.subscribeSubContainer}>
         <Grid container>
           <Grid item lg={2} xs={1} sm={1} md={1}></Grid>
           <Grid item lg={8} xs={10} sm={10} md={10}>
             <Typography sx={style.subscribeText}>SUBSCRIBE</Typography>
             <Typography sx={style.subscribeParaText}>
-              CPS shares spiritual wisdom to connect people to their Creator to
-              learn the art of life management and rationally find answers to
-              questions pertaining to life and its purpose. Subscribe to our
-              newsletters.
+              We are living in a completely new world today. It is a world full
+              of uncertainties. CPS connects you to your Creator and helps you
+              to rationally find answers pertaining to the purpose of life by
+              understanding the Creation Plan of God. Then you will be able to
+              manage the uncertainties of life effectively. This newsletter is a
+              must if you want to traverse the uncertainties of life
+              successfully.
             </Typography>
             <Box sx={style.formContainerDesign}>
               <FormControl

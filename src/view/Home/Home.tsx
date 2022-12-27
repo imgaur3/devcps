@@ -5,17 +5,19 @@ import {
   ArticleCarosuel,
   SliderHeader,
   WrapperButton,
-  CarouselSlider,
   VideoCarosuel,
   BooksCarosuel,
   QuranCarousel,
+  CarouselSlider,
+  Subscribe,
+  GalleryCarousel,
 } from 'components';
-import { initiative, sec2, sec3, leafback } from 'assets';
+import { initiative, sec2, sec3, leafback, peace, involved } from 'assets';
 
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar/Navbar';
 import { style } from './style';
-
+import HomeAccordian from './HomeAccordian';
 const Home = () => {
   return (
     <Box sx={style.homeContainer}>
@@ -155,7 +157,6 @@ const Home = () => {
             HEREAFTER
           </Typography>
         </Box>
-        <CarouselSlider deviceType={undefined} />
         <WrapperButton sx={style.loadMoreButton} title={'VIEW ALL'} />
       </Box>
       <Box sx={style.fourthSectionContainer}>
@@ -171,7 +172,6 @@ const Home = () => {
           </Grid>
           <Grid item lg={12} sm={12} md={12} xs={12}>
             <Box>
-              <CarouselSlider deviceType={undefined} />
               <WrapperButton
                 sx={style.thoughtLoadMoreButton}
                 title={'VIEW ALL'}
@@ -220,7 +220,6 @@ const Home = () => {
           </Grid>
           <Grid item lg={12} sm={12} md={12} xs={12}>
             <Box>
-              <CarouselSlider />
               <WrapperButton
                 sx={style.thoughtLoadMoreButton}
                 title={'VIEW ALL'}
@@ -320,6 +319,127 @@ const Home = () => {
             </Box>
           </Grid>
         </Grid>
+      </Box>
+      <Box sx={style.cpsLearningContainer}>
+        <Box>
+          <Typography sx={style.caroVideoTitle}>CPS E-LEARNING</Typography>
+          <Typography sx={style.caroDesc}>
+            TOWARDS GOD - REALIZATION AND DUTY - CONSCIOUSNESS
+          </Typography>
+        </Box>
+        <Box sx={style.learnCardContainer}>
+          <Box sx={style.learnCardSubContainer}>
+            <CarouselSlider />
+            <Box sx={{ marginTop: 5 }}>
+              <WrapperButton
+                sx={style.thoughtLoadMoreButton}
+                title={'VIEW ALL'}
+              />
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+      <Box sx={style.initiativeContainer}>
+        <Grid container spacing={3}>
+          <Grid item lg={6} sm={12} md={12} xs={12}>
+            <Box sx={{ padding: 3 }}>
+              <Typography sx={style.sectionHeading}>
+                CPS QURAN FOR ALL INITIATIVE
+              </Typography>
+              <Typography sx={style.sectionMoreDescription}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
+                neque non libero pellentesque aliquet. Nulla facilisi. Morbi
+                molestie odio maximus congue laoreet. Donec tellus magna,
+                posuere sit amet felis ac, maximus facilisis urna. Ut convallis
+                tellus non diam porttitor pretium et eu enim. Ut finibus auctor
+                urna,
+              </Typography>
+              <WrapperButton
+                title={'LEARN MORE'}
+                sx={style.downloadQuranButton}
+              />
+            </Box>
+          </Grid>
+          <Grid item lg={6} sm={12} md={12} xs={12}>
+            <Box sx={{ padding: 3 }}>
+              <Box sx={style.imageResponsive}>
+                <img src={peace} alt="peace-image" />
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box sx={style.initiativeContainer}>
+        <Grid container spacing={3}>
+          <Grid item lg={6} sm={12} md={12} xs={12}>
+            <Box sx={{ padding: 3 }}>
+              <Box sx={style.imageResponsive}>
+                <img src={involved} alt="involved" />
+              </Box>
+            </Box>
+          </Grid>
+          <Grid item lg={6} sm={12} md={12} xs={12}>
+            <Box sx={{ padding: 3 }}>
+              <Typography sx={style.sectionHeading}>GET INVOLVED</Typography>
+              <Typography sx={style.sectionMoreDescription}>
+                CPS Peace and Quran for All Initiatives are taking the message
+                of the Quran and Islamic literature to the world. This is a
+                herculean task. We invite you to Get Involved{' '}
+                <span style={{ fontWeight: 'bold' }}>info@cpsglobal.org</span>
+              </Typography>
+              <WrapperButton
+                title={'LEARN MORE'}
+                sx={style.downloadQuranButton}
+              />
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box sx={style.cpsLearningContainer}>
+        <Box>
+          <Typography sx={style.caroVideoTitle}>AMBASSADOR OF PEACE</Typography>
+        </Box>
+        <Box sx={style.learnCardContainer}>
+          <Box sx={style.learnCardSubContainer}>
+            <ArticleCarosuel />
+            <Box sx={{ marginTop: 5 }}>
+              <WrapperButton
+                sx={style.thoughtLoadMoreButton}
+                title={'VIEW ALL'}
+              />
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+      <Box sx={style.galleryContainer}>
+        <Typography sx={style.galleryHeading}>GALLERY</Typography>
+        <Box>
+          <GalleryCarousel />
+        </Box>
+        <Box sx={{ marginTop: 5 }}>
+          <WrapperButton sx={style.galleryLoadMoreButton} title={'VIEW ALL'} />
+        </Box>
+      </Box>
+      <Box style={style.accrodianContainer}>
+        <Box sx={{ paddingBottom: 5 }}>
+          <Typography sx={style.caroVideoTitle}>FAQS</Typography>
+        </Box>
+        <Grid container spacing={2}>
+          <Grid item lg={2} md={1} sm={1} xs={1}></Grid>
+          <Grid item lg={8} md={10} sm={10} xs={10}>
+            <HomeAccordian />
+            <Box sx={{ marginTop: 5, textAlign: 'center' }}>
+              <WrapperButton
+                sx={style.accordianLoadMoreButton}
+                title={'VIEW ALL'}
+              />
+            </Box>
+          </Grid>
+          <Grid item lg={2} md={1} sm={1} xs={1}></Grid>
+        </Grid>
+      </Box>
+      <Box sx={style.subscribeFooterContainer}>
+        <Subscribe />
       </Box>
       <Footer />
     </Box>

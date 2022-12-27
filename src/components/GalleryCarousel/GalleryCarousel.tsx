@@ -3,8 +3,7 @@ import { Box, Typography } from '@mui/material';
 import Carousel from 'react-multi-carousel';
 
 import 'react-multi-carousel/lib/styles.css';
-
-import { gallery1, gallery2, gallery3 } from 'assets';
+import { gallery1, gallery2, gallery3, gallery4, gallery5 } from 'assets';
 
 import { style } from './style';
 
@@ -15,25 +14,35 @@ const cardData = [
   {
     id: '1',
     image: gallery1,
-    title:
-      'I thank God for giving us His biggest blessing in the form of Maulana who made our lives not…',
-    description: 'DR. RAJAT MALHOTRA, New Delhi',
+    title: 'COUNTERING VIOLENT EXTREMISM',
+    description: 'Case of Ideology Vs Counter-Ideology',
   },
   {
     id: '2',
     image: gallery2,
-    title:
-      'Maulana was and will remain my greatest well-wisher. He helped me in strengthening my…',
-    description: 'FARAZ KHAN, New Delhi',
+    title: 'CULTURE OF PEACE',
+    description: 'Developing God Oriented Personalities',
   },
   {
     id: '3',
     image: gallery3,
-    title:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac tellus et lorem egestas…',
-    description: 'XYZ, New Delhi',
+    title: 'INTERFAITH DIALOGUE FOR PEACE-MAKING',
+    description: 'Peaceful Dialogue for Mutual Learning',
+  },
+  {
+    id: '4',
+    image: gallery4,
+    title: 'INTERFAITH DIALOGUE FOR PEACE-MAKING',
+    description: 'Peaceful Dialogue for Mutual Learning',
+  },
+  {
+    id: '5',
+    image: gallery5,
+    title: 'INTERFAITH DIALOGUE FOR PEACE-MAKING',
+    description: 'Peaceful Dialogue for Mutual Learning',
   },
 ];
+
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -51,13 +60,13 @@ const responsive = {
     slidesToSlide: 1, // optional, default to 1.
   },
 };
-const ArticleCarosuel = ({ deviceType }: props) => {
+const GalleryCarousel = ({ deviceType }: props) => {
   return (
     <Box sx={style.carouselContainer}>
       <Carousel
         swipeable={true}
         draggable={true}
-        showDots={false}
+        showDots={true}
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
@@ -70,7 +79,7 @@ const ArticleCarosuel = ({ deviceType }: props) => {
         removeArrowOnDeviceType={['tablet', 'mobile', 'desktop']}
         deviceType={deviceType}
         dotListClass="custom-dot-list-style"
-        // itemClass="carousel-item-padding-40-px"
+        itemClass="carousel-item-padding-40-px"
       >
         {cardData.map((item: any) => (
           <Box sx={style.learnCardBox} key={`${item.id}`}>
@@ -91,4 +100,4 @@ const ArticleCarosuel = ({ deviceType }: props) => {
   );
 };
 
-export default ArticleCarosuel;
+export default GalleryCarousel;
