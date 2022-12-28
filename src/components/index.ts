@@ -12,6 +12,7 @@ import Accordian from './Wrapper/WrappedAccordian/Accordian';
 import GalleryCarousel from './GalleryCarousel/GalleryCarousel';
 import QuotesCarosuel from './QuotesCarosuel/QuotesCarosuel';
 import WisdomCarosuel from './WisdomCarosuel/WisdomCarosuel';
+import FeaturedCarosuel from './FeaturedCarosuel/FeaturedCarosuel';
 export {
   Header,
   WrapperButton,
@@ -27,4 +28,5 @@ export {
   GalleryCarousel,
   QuotesCarosuel,
   WisdomCarosuel,
+  FeaturedCarosuel,
 };

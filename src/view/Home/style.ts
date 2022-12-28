@@ -136,16 +136,18 @@ export const style = {
     padding: '50px 100px 50px 100px',
     '@media screen and (max-width: 600px)': {
       padding: '10px 20px 10px 20px',
+      textAlign: 'center',
     },
   },
   downloadQuranButton: {
     background: theme.palette.text.secondary,
     padding: '5px 25px 5px 25px',
+    margin: 1,
   },
   readOnlineButton: {
     background: theme.palette.text.secondary,
     padding: '5px 25px 5px 25px',
-    marginLeft: 2,
+    margin: 1,
   },
   sevenContainer: {
     background: theme.palette.background.paper,

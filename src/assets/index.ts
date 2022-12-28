@@ -16,6 +16,7 @@ import initiative from './images/initiative.jpg';
 import card1 from './images/card1.jpg';
 import card2 from './images/card2.jpg';
 import article1 from './images/article1.jpg';
+import article2 from './images/article2.jpg';
 import videoCaro1 from './images/videoCaro1.jpg';
 import book1 from './images/book1.jpg';
 import book2 from './images/book2.jpg';
@@ -80,4 +81,5 @@ export {
   quote3,
   quote4,
   quote5,
+  article2,
 };

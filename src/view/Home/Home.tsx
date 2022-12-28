@@ -13,6 +13,7 @@ import {
   GalleryCarousel,
   QuotesCarosuel,
   WisdomCarosuel,
+  FeaturedCarosuel,
 } from 'components';
 import { initiative, sec2, sec3, leafback, peace, involved } from 'assets';
 
@@ -244,6 +245,7 @@ const Home = () => {
           </Grid>
           <Grid item lg={12} xs={12} md={12} sm={12}>
             <Box sx={{ textAlign: 'center' }}>
+              <FeaturedCarosuel />
               <WrapperButton sx={style.loadMoreButton} title={'VIEW ALL'} />
             </Box>
           </Grid>
