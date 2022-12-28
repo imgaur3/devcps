@@ -8,8 +8,6 @@ import { logIn } from '../../../assets/index';
 import { style } from './style';
 
 const LogIn = () => {
-  // const email = 'admin@gmail.com';
-  // const password = 'admin#123';
   const navigate = useNavigate();
   const { handleSubmit, control, getValues } = useForm({
     mode: 'onChange',
@@ -18,15 +16,12 @@ const LogIn = () => {
     const data: any = { ...getValues() };
     // eslint-disable-next-line no-console
     console.log(data, 'data');
-    // const loggedUser = localStorage.getItem('user');
-    // const parsedData = loggedUser !== null ? JSON.parse(loggedUser) : '{}';
-    // // eslint-disable-next-line no-console
-    // console.log(parsedData);
-    // if (email === 'admin@gmail.com' && password === 'admin#123') {
-    navigate('/home');
-    // } else {
-    //   navigate('/signup');
-    // }
+    const loggedIn = localStorage.getItem('user');
+    if (!loggedIn) {
+      navigate('/signup');
+    } else {
+      navigate('/home');
+    }
   };
   return (
     <Box sx={style.signupContainer}>

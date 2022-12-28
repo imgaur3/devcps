@@ -22,7 +22,7 @@ const SignUp = () => {
   const onSubmit = () => {
     setIsLoading(false);
     const data = { ...getValues() };
-    localStorage.setItem('user', JSON.stringify(data));
+    const loggedIn = localStorage.setItem('user', JSON.stringify(data));
     navigate('/login');
     dispatchAction(
       signUp({
@@ -31,12 +31,8 @@ const SignUp = () => {
         password: get(data, 'password'),
       }),
     );
-    const user = localStorage.getItem('user');
     // eslint-disable-next-line no-console
-    console.log(user);
-    if (user === '"test@gmail.com"') {
-      navigate('/home');
-    } else navigate('/signup');
+    console.log(loggedIn);
   };
 
   const navigate = useNavigate();
