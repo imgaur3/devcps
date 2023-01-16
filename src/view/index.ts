@@ -4,6 +4,7 @@ import { LogInRoute } from './Authentication/LogIn/Routes';
 import { SignUpRoute } from './Authentication/SignUp/Routes';
 import { HomeRoute } from './Home/Routes';
 import { NotFoundRoute } from './NotFound/Routes';
+import { ThemeRoute } from './Themes/Routes';
 
 export {
   AboutRoute,
@@ -12,4 +13,5 @@ export {
   SignUpRoute,
   HomeRoute,
   NotFoundRoute,
+  ThemeRoute,
 };

@@ -17,14 +17,11 @@ import {
 } from 'components';
 import { initiative, sec2, sec3, leafback, peace, involved } from 'assets';
 
-import Footer from '../../components/Footer';
-import Navbar from '../../components/Navbar/Navbar';
 import { style } from './style';
 import HomeAccordian from './HomeAccordian';
 const Home = () => {
   return (
     <Box sx={style.homeContainer}>
-      <Navbar />
       <Box sx={style.sliderContainer}>
         <SliderHeader />
       </Box>
@@ -53,7 +50,6 @@ const Home = () => {
                 <iframe
                   src="https://www.youtube.com/embed/n0AIGEI7b9U"
                   title="YouTube video player"
-                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 />
               </Box>
@@ -467,7 +463,6 @@ const Home = () => {
       <Box sx={style.subscribeFooterContainer}>
         <Subscribe />
       </Box>
-      <Footer />
     </Box>
   );
 };

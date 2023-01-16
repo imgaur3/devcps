@@ -5,7 +5,7 @@ export const style = {
   footerContainer: {
     width: '100%',
     padding: '10px 5px 30px 5px',
-    background: theme.palette.background.default,
+    background: theme.palette.grey.A100,
   },
   sectionHeading: {
     color: theme.palette.background.paper,

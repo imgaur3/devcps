@@ -41,7 +41,6 @@ export const style = {
   },
   searchIconStyle: {
     mr: 2,
-    display: { sm: 'none' },
     color: theme.palette.grey[500],
   },
   hamburgerIcon: {

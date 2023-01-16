@@ -13,6 +13,9 @@ import GalleryCarousel from './GalleryCarousel/GalleryCarousel';
 import QuotesCarosuel from './QuotesCarosuel/QuotesCarosuel';
 import WisdomCarosuel from './WisdomCarosuel/WisdomCarosuel';
 import FeaturedCarosuel from './FeaturedCarosuel/FeaturedCarosuel';
+import Navbar from './Navbar/Navbar';
+import Footer from './Footer';
+import { AutoCompleteField } from './FormFields/AutoCompleteField';
 export {
   Header,
   WrapperButton,
@@ -29,4 +32,7 @@ export {
   QuotesCarosuel,
   WisdomCarosuel,
   FeaturedCarosuel,
+  Navbar,
+  Footer,
+  AutoCompleteField,
 };

@@ -58,13 +58,13 @@ export const theme = createTheme({
       700: '#F3F6F9', //
       800: '#818E9A',
       900: '#16192C',
-      A100: '#0A6DF7', //Blue
+      A100: '#2E5D9E', //Blue
       A200: '#EC4B46', //Red
       A400: '#9FA3A8',
       A700: '#EFF3F6',
     },
     background: {
-      default: '#2E5D9E',
+      default: '#FFFFFF',
       paper: '#FFFFFF',
     },
   },

@@ -9,10 +9,11 @@ import {
   SignUpRoute,
   HomeRoute,
   NotFoundRoute,
+  ThemeRoute,
 } from './view';
 
 const PublicRoutes = [LogInRoute, SignUpRoute, NotFoundRoute];
-const AdminRoutes = [HomeRoute, AboutRoute, AdminRoute];
+const AdminRoutes = [HomeRoute, AboutRoute, AdminRoute, ThemeRoute];
 
 const AppRoutes = () => {
   const appRoutes: RouteObject[] = createRoutes({

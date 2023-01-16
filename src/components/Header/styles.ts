@@ -1,45 +1,36 @@
+import { fontFamily } from 'common/utils/constants';
 export const style = {
-  boxContainer: {
+  headerContainer: {
     width: '100%',
-    height: 'auto',
+  },
+  headerOverlapImage: {
+    '& img': {
+      width: '100%',
+      position: 'relative',
+      objectFit: 'cover',
+      height: '500px',
+      '@media screen and (max-width: 600px)': {
+        height: 200,
+      },
+    },
+  },
+  headerOverlapImageText: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
     '@media screen and (maxWidth: 600px)': {
       height: 200,
+      transform: 'translate(-50%, -50%)',
     },
   },
-  headerText: {
-    fontSize: '80px',
-    fontFamily: 'Oswald',
-    color: '#ffff',
-    fontWeight: '500',
-    flexDirection: 'row',
-    paddingTop: '200px',
-    paddingLeft: '100px',
-    textTransform: 'uppercase',
-    whiteSpace: 'pre-line',
-    lineHeight: 1.1,
-    '@media screen and (max-width: 600px)': {
-      fontSize: '30px',
-      paddingTop: '50px',
-      paddingLeft: '30px',
-    },
-  },
-  linearGradient: {
-    background:
-      'linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(0,212,255,0) 100%)',
-    height: '600px',
-    '@media screen and (max-width: 600px)': {
-      height: '200px',
-    },
-  },
-  headerHomeImage: {
-    width: '100%',
-    position: 'absolute',
-    height: '600px',
-    zIndex: '-1',
-    objectFit: 'cover',
-    '@media screen and (max-width: 600px)': {
-      width: '100%',
-      height: '200px',
+  headerMiddleText: {
+    color: '#ffff00',
+    fontFamily: fontFamily,
+    fontSize: 80,
+    '@media only screen and (maxWidth: 600px)': {
+      height: 40,
+      marginTop: -150,
     },
   },
 };

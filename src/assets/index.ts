@@ -39,6 +39,7 @@ import quote2 from './images/quote2.jpg';
 import quote3 from './images/quote3.jpg';
 import quote4 from './images/quote4.jpg';
 import quote5 from './images/quote5.jpg';
+import themes from './images/themes.jpg';
 
 export {
   logIn,
@@ -82,4 +83,5 @@ export {
   quote4,
   quote5,
   article2,
+  themes,
 };

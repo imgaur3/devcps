@@ -5,7 +5,6 @@ import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
-import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -307,7 +306,7 @@ export default function Navbar(props: Props) {
             color="inherit"
             onClick={() => setSearch(!search)}
           >
-            <SearchIcon sx={style.searchIconStyle} />
+            <SearchContainer />
           </IconButton>
         </Toolbar>
       </AppBar>
