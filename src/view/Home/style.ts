@@ -79,6 +79,7 @@ export const style = {
   imageResponsive: {
     '& img': {
       width: '100%',
+      padding: 7,
     },
   },
   carouselContainer: {

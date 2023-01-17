@@ -100,7 +100,7 @@ const Home = () => {
             </Box>
           </Grid>
           <Grid item lg={6} sm={12} md={12} xs={12}>
-            <Box sx={{ padding: 3 }}>
+            <Box>
               <Box sx={style.imageResponsive}>
                 <img src={sec3} alt="Sec2-image" />
               </Box>

@@ -40,6 +40,27 @@ import quote3 from './images/quote3.jpg';
 import quote4 from './images/quote4.jpg';
 import quote5 from './images/quote5.jpg';
 import themes from './images/themes.jpg';
+import themeCard1 from './images/themeCard1.jpg';
+import themeCard2 from './images/themeCard2.jpg';
+import themeCard3 from './images/themeCard3.jpg';
+import themeCard4 from './images/themeCard4.jpg';
+import themeCard5 from './images/themeCard5.jpg';
+import themeCard6 from './images/themeCard6.jpg';
+import themeCard7 from './images/themeCard7.jpg';
+import themeCard8 from './images/themeCard8.jpg';
+import themeCard9 from './images/themeCard9.jpg';
+import themeCard10 from './images/themeCard10.jpg';
+import themeCard11 from './images/themeCard11.jpg';
+import themeCard12 from './images/themeCard12.jpg';
+import themeCard13 from './images/themeCard13.jpg';
+import themeCard14 from './images/themeCard14.jpg';
+import themeCard15 from './images/themeCard15.jpg';
+import themeCard16 from './images/themeCard16.jpg';
+import themeCard17 from './images/themeCard17.jpg';
+import themeCard18 from './images/themeCard18.jpg';
+import themeCard22 from './images/themeCard22.jpg';
+import themeCard23 from './images/themeCard23.jpg';
+import themeCard24 from './images/themeCard24.jpg';
 
 export {
   logIn,
@@ -84,4 +105,25 @@ export {
   quote5,
   article2,
   themes,
+  themeCard1,
+  themeCard2,
+  themeCard3,
+  themeCard4,
+  themeCard5,
+  themeCard6,
+  themeCard7,
+  themeCard8,
+  themeCard9,
+  themeCard10,
+  themeCard11,
+  themeCard12,
+  themeCard13,
+  themeCard14,
+  themeCard15,
+  themeCard16,
+  themeCard17,
+  themeCard18,
+  themeCard22,
+  themeCard23,
+  themeCard24,
 };

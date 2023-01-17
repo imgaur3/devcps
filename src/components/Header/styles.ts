@@ -19,18 +19,16 @@ export const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    '@media screen and (maxWidth: 600px)': {
-      height: 200,
-      transform: 'translate(-50%, -50%)',
+    '@media screen and (max-width: 600px)': {
+      top: '32%',
     },
   },
   headerMiddleText: {
     color: '#ffff00',
     fontFamily: fontFamily,
     fontSize: 80,
-    '@media only screen and (maxWidth: 600px)': {
-      height: 40,
-      marginTop: -150,
+    '@media screen and (maxWidth: 600px)': {
+      color: 'red',
     },
   },
 };
