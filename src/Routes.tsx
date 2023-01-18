@@ -1,9 +1,10 @@
 import React from 'react';
 import { useRoutes, RouteObject } from 'react-router-dom';
 
+import DiscoverGodRoute from 'view/Themes/DiscoverGod';
+
 import { createRoutes } from './common/utils/route-utils';
 import {
-  AboutRoute,
   AdminRoute,
   LogInRoute,
   SignUpRoute,
@@ -13,7 +14,7 @@ import {
 } from './view';
 
 const PublicRoutes = [LogInRoute, SignUpRoute, NotFoundRoute];
-const AdminRoutes = [HomeRoute, AboutRoute, AdminRoute, ThemeRoute];
+const AdminRoutes = [HomeRoute, AdminRoute, ThemeRoute, DiscoverGodRoute];
 
 const AppRoutes = () => {
   const appRoutes: RouteObject[] = createRoutes({

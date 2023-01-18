@@ -35,7 +35,6 @@ export const style = {
     fontFamily: 'open sans',
   },
   learnCardBox: {
-    margin: 1,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

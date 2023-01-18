@@ -8,7 +8,7 @@ export const style = {
       width: '100%',
       position: 'relative',
       objectFit: 'cover',
-      height: '500px',
+      height: '600px',
       '@media screen and (max-width: 600px)': {
         height: 200,
       },

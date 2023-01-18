@@ -61,6 +61,10 @@ import themeCard18 from './images/themeCard18.jpg';
 import themeCard22 from './images/themeCard22.jpg';
 import themeCard23 from './images/themeCard23.jpg';
 import themeCard24 from './images/themeCard24.jpg';
+import themesSubCover from './images/themesSubCover.jpg';
+import subTheme1 from './images/subTheme1.jpg';
+import subTheme2 from './images/subTheme2.jpg';
+import subTheme3 from './images/subTheme3.jpg';
 
 export {
   logIn,
@@ -126,4 +130,8 @@ export {
   themeCard22,
   themeCard23,
   themeCard24,
+  themesSubCover,
+  subTheme1,
+  subTheme2,
+  subTheme3,
 };

@@ -16,6 +16,8 @@ import FeaturedCarosuel from './FeaturedCarosuel/FeaturedCarosuel';
 import Navbar from './Navbar/Navbar';
 import Footer from './Footer';
 import { AutoCompleteField } from './FormFields/AutoCompleteField';
+import WrappedSelect from './Wrapper/WrapperSelect/WrapperSelect';
+import { WrappedInput } from './Wrapper/WrapperInput/WrapperInput';
 export {
   Header,
   WrapperButton,
@@ -35,4 +37,6 @@ export {
   Navbar,
   Footer,
   AutoCompleteField,
+  WrappedSelect,
+  WrappedInput,
 };
