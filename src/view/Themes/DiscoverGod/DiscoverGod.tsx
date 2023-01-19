@@ -8,6 +8,8 @@ import {
   WrappedInput,
   VideoCarosuel,
   WrapperButton,
+  DiscoverGodCaro,
+  Subscribe,
 } from 'components';
 import { themesSubCover, subTheme1, subTheme2, subTheme3 } from 'assets';
 
@@ -143,12 +145,106 @@ const DiscoverGod = () => {
             <SubThemes img={subTheme1} title={'ABSOLUTE TRUST IN GOD'} />
           </Box>
           <Box>
-            <SubThemes img={subTheme2} title={'ABSOLUTE TRUST IN GOD'} />
+            <SubThemes img={subTheme2} title={'ATHISM'} />
           </Box>
           <Box>
-            <SubThemes img={subTheme3} title={'ABSOLUTE TRUST IN GOD'} />
+            <SubThemes img={subTheme3} title={'CREATOR AND CREATION'} />
           </Box>
         </Box>
+        <Box sx={style.subThemesCardsContainer}>
+          <Box>
+            <SubThemes img={subTheme1} title={'DISCOVER GOD'} />
+          </Box>
+          <Box>
+            <SubThemes
+              img={subTheme2}
+              title={'ALL POWERFULNESS OF GOD, HELPLESSNESS OF MAN'}
+            />
+          </Box>
+          <Box>
+            <SubThemes img={subTheme3} title={'DIVINE SIGNS IN NATURE'} />
+          </Box>
+        </Box>
+        <Box sx={style.subThemesCardsContainer}>
+          <Box>
+            <SubThemes
+              img={subTheme1}
+              title={'WHERE THERE IS DESIGN, THERE IS A DESIGNER'}
+            />
+          </Box>
+          <Box>
+            <SubThemes img={subTheme2} title={'DUA: A CALL TO GOD'} />
+          </Box>
+          <Box>
+            <SubThemes img={subTheme3} title={'MAN DOES NOT STAND ALONE'} />
+          </Box>
+        </Box>
+        <Box sx={style.subThemesCardsContainer}>
+          <Box>
+            <SubThemes img={subTheme1} title={'MONOTHEISM: TAWHEED'} />
+          </Box>
+          <Box>
+            <SubThemes
+              img={subTheme2}
+              title={'RELATIONSHIP BETWEEN GOD AND MAN'}
+            />
+          </Box>
+          <Box>
+            <SubThemes img={subTheme3} title={'SUBMISSION TO GOD'} />
+          </Box>
+        </Box>
+        <Box sx={style.subThemesCardsContainer}>
+          <Box>
+            <SubThemes
+              img={subTheme1}
+              title={'TAQWA: GOD-CONSCIOUSNESS OR FEAR OF GOD'}
+            />
+          </Box>
+          <Box>
+            <SubThemes img={subTheme2} title={'GOD: THE MOST MERCIFUL'} />
+          </Box>
+          <Box>
+            <SubThemes img={subTheme3} title={'ZIKR: REMEMBERENCE OF GOD'} />
+          </Box>
+        </Box>
+        <Box sx={style.subThemesCardsContainer}>
+          <Box>
+            <SubThemes img={subTheme1} title={'LOVE OF GOD'} />
+          </Box>
+          <Box>
+            <SubThemes img={subTheme2} title={'CREATION PLAN OF GOD'} />
+          </Box>
+          <Box>
+            <SubThemes img={subTheme3} title={'Maarifah: Realisation of God'} />
+          </Box>
+        </Box>
+        <Box sx={style.subThemesCardsContainer}>
+          <Box>
+            <SubThemes
+              img={subTheme1}
+              title={'Interpretation of Human History'}
+            />
+          </Box>
+        </Box>
+      </Box>
+      <Box sx={style.booksCaroContainer}>
+        <Grid container>
+          <Grid item lg={12} sm={12} md={12} xs={12}>
+            <Typography sx={style.caroVideoTitle}>RELATED BOOKS</Typography>
+          </Grid>
+          <Grid item lg={12} sm={12} md={12} xs={12}>
+            <Box>
+              <DiscoverGodCaro />
+              <WrapperButton
+                sx={style.thoughtLoadMoreButton}
+                title={'VIEW ALL'}
+              />
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <Box>
+        <Subscribe />
       </Box>
     </Box>
   );

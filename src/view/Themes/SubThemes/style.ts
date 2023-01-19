@@ -15,17 +15,18 @@ export const style = {
       height: 250,
       width: 340,
       objectFit: 'cover',
-      padding: 1,
+      padding: 2,
     },
   },
 
   absoText: {
     position: 'absolute',
-    top: 100,
-    left: 50,
+    transform: 'translate(-50%, -50%)',
+    top: '50%',
+    left: '50%',
     color: theme.palette.background.paper,
     fontFamily: 'open sans',
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: 200,
   },
 };

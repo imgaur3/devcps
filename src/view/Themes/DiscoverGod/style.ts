@@ -69,6 +69,15 @@ export const style = {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
+    textAlign: 'center',
+  },
+  booksCaroContainer: {
+    width: '100%',
+    textAlign: 'center',
+    padding: '70px 120px 70px 120px',
+    '@media screen and (max-width: 600px)': {
+      padding: '20px 40px 20px 40px',
+    },
   },
 };

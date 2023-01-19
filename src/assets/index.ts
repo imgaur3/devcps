@@ -65,6 +65,12 @@ import themesSubCover from './images/themesSubCover.jpg';
 import subTheme1 from './images/subTheme1.jpg';
 import subTheme2 from './images/subTheme2.jpg';
 import subTheme3 from './images/subTheme3.jpg';
+import booksCaro1 from './images/booksCaro1.jpg';
+import booksCaro2 from './images/booksCaro2.jpg';
+import booksCaro3 from './images/booksCaro3.jpg';
+import booksCaro4 from './images/booksCaro4.jpg';
+import booksCaro5 from './images/booksCaro5.jpg';
+import booksCaro6 from './images/booksCaro6.jpg';
 
 export {
   logIn,
@@ -134,4 +140,10 @@ export {
   subTheme1,
   subTheme2,
   subTheme3,
+  booksCaro1,
+  booksCaro2,
+  booksCaro3,
+  booksCaro4,
+  booksCaro5,
+  booksCaro6,
 };

@@ -18,6 +18,7 @@ import Footer from './Footer';
 import { AutoCompleteField } from './FormFields/AutoCompleteField';
 import WrappedSelect from './Wrapper/WrapperSelect/WrapperSelect';
 import { WrappedInput } from './Wrapper/WrapperInput/WrapperInput';
+import DiscoverGodCaro from './DiscoverGodCaro/DiscoverGodCaro';
 export {
   Header,
   WrapperButton,
@@ -39,4 +40,5 @@ export {
   AutoCompleteField,
   WrappedSelect,
   WrappedInput,
+  DiscoverGodCaro,
 };
