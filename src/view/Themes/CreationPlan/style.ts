@@ -2,7 +2,7 @@ import { fontFamily } from 'common/utils/constants';
 import { theme } from 'Theme';
 
 export const style = {
-  discoverGodContainer: {
+  creationPlanContainer: {
     width: '100%',
     background: theme.palette.background.paper,
   },
@@ -36,27 +36,16 @@ export const style = {
       padding: '20px 40px 20px 40px',
     },
   },
-  caroVideoTitle: {
-    fontFamily: fontFamily,
+  discoverFilterContainer: {
     textAlign: 'center',
-    fontSize: 50,
-    color: theme.palette.text.secondary,
+    padding: 1.5,
   },
   thoughtLoadMoreButton: {
     background: theme.palette.text.secondary,
     padding: '5px 25px 5px 25px',
     fontWeight: 'bold',
   },
-  featurVideoContainer: {
-    width: '100%',
-    textAlign: 'center',
-    background: theme.palette.secondary.main,
-    padding: '70px 120px 70px 120px',
-    '@media screen and (max-width: 600px)': {
-      padding: '20px 40px 20px 40px',
-    },
-  },
-  subThemesTitle: {
+  caroVideoTitle: {
     fontFamily: fontFamily,
     textAlign: 'center',
     fontSize: 50,
@@ -72,16 +61,10 @@ export const style = {
     justifyContent: 'center',
     textAlign: 'center',
   },
-  booksCaroContainer: {
-    width: '100%',
+  subThemesTitle: {
+    fontFamily: fontFamily,
     textAlign: 'center',
-    padding: '70px 120px 70px 120px',
-    '@media screen and (max-width: 600px)': {
-      padding: '20px 40px 20px 40px',
-    },
-  },
-  discoverFilterContainer: {
-    textAlign: 'center',
-    padding: 1.5,
+    fontSize: 50,
+    color: theme.palette.text.secondary,
   },
 };

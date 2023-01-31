@@ -4,15 +4,13 @@ import { useForm } from 'react-hook-form';
 
 import {
   Header,
-  WrappedSelect,
-  WrappedInput,
   VideoCarosuel,
+  WrappedInput,
+  WrappedSelect,
   WrapperButton,
-  DiscoverGodCaro,
-  Subscribe,
 } from 'components';
 import {
-  themesSubCover,
+  creationPlan,
   subTheme1,
   subTheme2,
   subTheme3,
@@ -23,7 +21,6 @@ import {
 
 import { style } from './style';
 import SubThemes from '../SubThemes/SubThemes';
-
 const languageItems = [
   { value: 'Articles', label: 'Articles' },
   { value: 'Audio', label: 'Audio' },
@@ -38,15 +35,14 @@ const typeValues = [
   { value: 'Urdu', label: 'Urdu' },
   { value: 'Arabic', label: 'Arabic' },
 ];
-
-const DiscoverGod = () => {
+const CreationPlan = () => {
   const { control } = useForm({
     mode: 'onChange',
   });
   return (
-    <Box sx={style.discoverGodContainer}>
+    <Box sx={style.creationPlanContainer}>
       <Box>
-        <Header image={themesSubCover} text={'DISCOVER GOD'} />
+        <Header image={creationPlan} text={'CREATION PLAN OF GOD'} />
       </Box>
       <Box sx={style.discoverTextContainer}>
         <Typography sx={style.discoverParaContainer}>
@@ -126,22 +122,6 @@ const DiscoverGod = () => {
         <Grid container>
           <Grid item lg={12} sm={12} md={12} xs={12}>
             <Typography sx={style.caroVideoTitle}>FEATURED ARTICLES</Typography>
-          </Grid>
-          <Grid item lg={12} sm={12} md={12} xs={12}>
-            <Box>
-              <VideoCarosuel />
-              <WrapperButton
-                sx={style.thoughtLoadMoreButton}
-                title={'VIEW ALL'}
-              />
-            </Box>
-          </Grid>
-        </Grid>
-      </Box>
-      <Box sx={style.featurVideoContainer}>
-        <Grid container>
-          <Grid item lg={12} sm={12} md={12} xs={12}>
-            <Typography sx={style.caroVideoTitle}>FEATURED VIDEOS</Typography>
           </Grid>
           <Grid item lg={12} sm={12} md={12} xs={12}>
             <Box>
@@ -245,27 +225,8 @@ const DiscoverGod = () => {
           </Box>
         </Box>
       </Box>
-      <Box sx={style.booksCaroContainer}>
-        <Grid container>
-          <Grid item lg={12} sm={12} md={12} xs={12}>
-            <Typography sx={style.caroVideoTitle}>RELATED BOOKS</Typography>
-          </Grid>
-          <Grid item lg={12} sm={12} md={12} xs={12}>
-            <Box>
-              <DiscoverGodCaro />
-              <WrapperButton
-                sx={style.thoughtLoadMoreButton}
-                title={'VIEW ALL'}
-              />
-            </Box>
-          </Grid>
-        </Grid>
-      </Box>
-      <Box>
-        <Subscribe />
-      </Box>
     </Box>
   );
 };
 
-export default DiscoverGod;
+export default CreationPlan;

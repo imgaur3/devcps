@@ -1,7 +1,9 @@
 import React from 'react';
 import { useRoutes, RouteObject } from 'react-router-dom';
 
+import { CreationPlanRoute } from 'view/Themes/CreationPlan/Routes';
 import DiscoverGodRoute from 'view/Themes/DiscoverGod';
+import QuranRoute from 'view/Themes/Quran';
 
 import { createRoutes } from './common/utils/route-utils';
 import {
@@ -14,7 +16,14 @@ import {
 } from './view';
 
 const PublicRoutes = [LogInRoute, SignUpRoute, NotFoundRoute];
-const AdminRoutes = [HomeRoute, AdminRoute, ThemeRoute, DiscoverGodRoute];
+const AdminRoutes = [
+  HomeRoute,
+  AdminRoute,
+  ThemeRoute,
+  DiscoverGodRoute,
+  CreationPlanRoute,
+  QuranRoute,
+];
 
 const AppRoutes = () => {
   const appRoutes: RouteObject[] = createRoutes({
